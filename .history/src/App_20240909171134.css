@@ -1,0 +1,9 @@
+
+@font-face {
+  font-family: "Nintendo Switch";
+  src: url("/src/assets/NINTENDOSWITCHUI.TTF");
+}
+
+.test{
+  font-family: "Nintendo Switch";
+}
