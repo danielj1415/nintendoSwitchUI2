@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import ScreenHome from "./ScreenHome"
-import ScreenAlbum from "./ScreenAlbum"
-import ScreenPhoto from "./ScreenPhoto"
-import ScreenSettings from "./ScreenSettings"
+import HomeScreen from './homeScreen'
+import AlbumScreen from "./albumScreen"
+import PhotoScreen from "./photoScreen"
+import SettingsScreen from "./settingsScreen"
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import './App.css'
 
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className = "test">
-      <ScreenHome/>
+      <HomeScreen/>
     </div>
   )
 }
