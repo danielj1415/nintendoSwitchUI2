@@ -6,7 +6,6 @@ function ScreenHome(){
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/> 
             <div className = "square-row">
                 <div className = "game"></div>
                 <div className = "game"></div>

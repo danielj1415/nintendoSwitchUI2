@@ -25,9 +25,9 @@
     height: 100px; /* Adjust the height of the row */
     z-index: 1; /* Ensure the row stays above the image */
     top: 50%; /* Vertically center the row */
-    transform: translateY(-240%); /* Adjust the top positioning for perfect centering */
     gap: 32px;
     margin-left: 80px;
+    margin-bottom: 100px;
   }
   
   /* Individual squares */
