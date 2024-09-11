@@ -1,0 +1,8 @@
+
+@import "./fonts.css";
+
+.homeScreen{
+    width: 1920px;
+    height: 940px; 
+    background-color: red;
+}

@@ -1,12 +1,12 @@
 
 import "./ScreenHome.css";
-import WallpaperOne from "./assets/images/wallpaperOne.jpg";
+import WallpaperOne from "./assets/images/wallpaperOne";
 
 function ScreenHome(){
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/>
+            
             </div>
         </div>
     )

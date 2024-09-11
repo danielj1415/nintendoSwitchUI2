@@ -1,0 +1,11 @@
+
+@import "./fonts.css";
+
+.homeScreen{
+    width: 1536px;
+    height: 864px; 
+    background-color: red;
+    z-index: 1; /* Ensure it is above the blurred background */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Make it semi-transparent */
+  backdrop-filter: blur(5px); /* Optional: Blur the content of the homeScreen itself */
+}

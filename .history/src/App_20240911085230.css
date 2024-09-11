@@ -5,9 +5,6 @@ html, body {
   width: 100%;
 }
 
-.appScreen{
+.test{
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }

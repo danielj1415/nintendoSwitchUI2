@@ -1,0 +1,10 @@
+
+@import "./fonts.css";
+
+.homeScreen{
+    width: 1920px;
+    height: 720px; 
+    background-color: red;
+    z-index: 1;
+    
+}

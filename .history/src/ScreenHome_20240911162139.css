@@ -1,0 +1,13 @@
+
+@import "./fonts.css";
+
+.homeScreen{
+    width: 1280px;
+    height: 720px; 
+    
+}
+
+.wallpaper{
+    width: 1920px;
+    height: 1080px;
+}

@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.appScreen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.appScreen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('path-to-your-background-image'); /* Use a relevant image or background color */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Apply blur effect */
+  z-index: -1; /* Send the blurred background behind the content */
+  transform: scale(1.1); /* Optional: Slightly enlarge the background for a better effect */
+}
