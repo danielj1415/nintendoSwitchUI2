@@ -41,11 +41,9 @@
 
   /* Selected game styles */
 .game.selected {
-    width: 480px; /* Increase the size of the selected game */
+    width: 460px; /* Increase the size of the selected game */
     height: 460px;
-    transform: translateY(-40px);
-    margin-right: 32px;
-    margin-left: 32px;
+    transform: translateY(-20px);
   }
   
   /* Game name styling */

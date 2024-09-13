@@ -1,10 +1,10 @@
 
 import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function ScreenHome(){
-    const squares = ["Game 1", "Game 2", "Game 3", "Game 4", "Game 5"]; // Array of game names
+    const squares = ["Game 1", "Game 2", "Game 3", "Game 4", "Game 5", "Game 6", "Game 7"]; // Array of game names
 
     const [selectedGame, setSelectedGame] = useState(0);
 
@@ -12,10 +12,8 @@ function ScreenHome(){
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
-        event.preventDefault(); // Prevent the default horizontal page scroll
         setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
       } else if (event.key === "ArrowLeft") {
-        event.preventDefault(); // Prevent the default horizontal page scroll
         setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
       }
     };

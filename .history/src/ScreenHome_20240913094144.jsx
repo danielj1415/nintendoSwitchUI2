@@ -12,10 +12,10 @@ function ScreenHome(){
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === "ArrowRight") {
-        event.preventDefault(); // Prevent the default horizontal page scroll
+        //event.preventDefault(); // Prevent the default horizontal page scroll
         setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
       } else if (event.key === "ArrowLeft") {
-        event.preventDefault(); // Prevent the default horizontal page scroll
+        //event.preventDefault(); // Prevent the default horizontal page scroll
         setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
       }
     };

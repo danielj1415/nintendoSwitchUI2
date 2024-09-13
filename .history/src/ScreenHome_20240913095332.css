@@ -44,8 +44,6 @@
     width: 480px; /* Increase the size of the selected game */
     height: 460px;
     transform: translateY(-40px);
-    margin-right: 32px;
-    margin-left: 32px;
   }
   
   /* Game name styling */
