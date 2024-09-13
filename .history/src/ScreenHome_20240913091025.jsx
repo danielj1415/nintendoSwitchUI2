@@ -3,8 +3,8 @@ import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 
 function ScreenHome(){
-    const squares = new Array(5).fill(0);
-    
+
+    const squares = new Array(5).fill(0); // Creates an array of 5 elements
 
     return(
         <div>

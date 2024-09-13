@@ -3,8 +3,8 @@ import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 
 function ScreenHome(){
-    const squares = new Array(5).fill(0);
-    
+    const squares = ["Game 1", "Game 2", "Game 3", "Game 4", "Game 5"]; // Array of game names
+    const [selectedGame, setSelectedGame] = useState(0);
 
     return(
         <div>
