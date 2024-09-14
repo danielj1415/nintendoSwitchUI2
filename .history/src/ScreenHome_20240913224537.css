@@ -52,21 +52,16 @@
   
   .game-name {
     position: absolute;
+    top: -60px; /* Adjust to move the name above the game box */
+    color: white;
+    font-size: 33px;
+    text-align: center;
     font-family: "Nintendo Switch UI";
     white-space: nowrap; /* Ensure the text stays on one line */
-    left: 50%; /* Center the text horizontally */
+    width: 100%; /* Take the full width of the game box */
+    left: 47%; /* Center the text horizontally */
     transform: translateX(-50%); /* Ensure centering within its container */
-    height: 100px;
-    top: -100px;
-    width: 600px;
   }
-
-  .game-name-text{
-    color: white;
-    font-size: 36px;
-    text-align: center;
-  }
-  
   
   
   

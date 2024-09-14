@@ -57,8 +57,9 @@
     left: 50%; /* Center the text horizontally */
     transform: translateX(-50%); /* Ensure centering within its container */
     height: 100px;
-    top: -100px;
-    width: 600px;
+    background-color: red;
+    top: -60px;
+    width: 400px;
   }
 
   .game-name-text{

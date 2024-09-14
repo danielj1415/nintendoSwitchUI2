@@ -4,7 +4,7 @@ import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 import { useState, useEffect } from 'react'
 
 function ScreenHome(){
-    const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
+    const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Game 4", "Game 5", "Game 6", "Game 7"]; // Array of game names
 
     const [selectedGame, setSelectedGame] = useState(0);
 
@@ -40,7 +40,7 @@ function ScreenHome(){
               className={`game ${selectedGame === index ? "selected" : ""}`}
               onClick={() => setSelectedGame(index)} // Click to select the game
             >
-              {selectedGame === index && <div className="game-name"><p className = "game-name-text">{gameName}</p></div>} {/* Show the name if selected */}
+              {selectedGame === index && <div className="game-name">{gameName}</div>} {/* Show the name if selected */}
             </div>
           ))}
                 </div>

@@ -40,7 +40,7 @@ function ScreenHome(){
               className={`game ${selectedGame === index ? "selected" : ""}`}
               onClick={() => setSelectedGame(index)} // Click to select the game
             >
-              {selectedGame === index && <div className="game-name"><p className = "game-name-text">{gameName}</p></div>} {/* Show the name if selected */}
+              {selectedGame === index && <div className="game-name">idk</div>} {/* Show the name if selected */}
             </div>
           ))}
                 </div>

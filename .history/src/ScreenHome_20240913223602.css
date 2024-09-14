@@ -50,24 +50,22 @@
     transform: translateY(-60px);
   }
   
+  /* Game name styling */
   .game-name {
     position: absolute;
-    font-family: "Nintendo Switch UI";
-    white-space: nowrap; /* Ensure the text stays on one line */
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Ensure centering within its container */
-    height: 100px;
-    top: -100px;
-    width: 600px;
-  }
-
-  .game-name-text{
+    top: -60px; /* Position the name above the game */
     color: white;
     font-size: 36px;
     text-align: center;
+    font-family: "Nintendo Switch UI";
+    white-space: normal; /* Allow the text to wrap to multiple lines */
+    width: 100%; /* Make the width flexible to take up the full width of the parent */
+    max-width: none; /* Remove the width limit */
+    padding: 0 10px; /* Add some padding to the left and right */
+    word-wrap: break-word; /* Break long words to prevent overflow */
+    margin: 0 auto; /* Center the text horizontally */
+    background-color: red;
   }
-  
-  
   
   
   
