@@ -86,6 +86,7 @@
         justify-content: center; /* Horizontally center the image */
         align-items: center; /* Vertically center the image */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+        /* opacity: 0.6; */
       }
     
       /* Selected game styles */
@@ -93,6 +94,7 @@
         width: 380px; /* Increase the size of the selected game */
         height: 380px;
         transform: translateY(-60px);
+        /* opacity: 1; /* Make selected game 100% opacity */
       }
       .game-name-text{
         color: #43D6DF;

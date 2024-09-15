@@ -126,15 +126,6 @@
         height: 92%;
         object-fit: cover; /* Ensure the image covers the entire div */
       }
-      .game-image {
-        opacity: 0.5; /* Make the image 50% opaque */
-        transition: opacity 0.3s ease; /* Smooth transition for the opacity change */
-      }
-      
-      /* Selected game's image (full opacity) */
-      .game.selected .game-image {
-        opacity: 1; /* Full opacity for the selected game's image */
-      }
 }
 
   

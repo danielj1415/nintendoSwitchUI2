@@ -79,13 +79,12 @@
         flex-shrink: 0;
         width: 306px;
         height: 306px;
-        background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
+        background-color: rgba(255, 255, 255, 0.2); /* Add some transparency */
         backdrop-filter: blur(15px); /* Apply the blur effect to the background */
         transition: all 0.3s ease; /* Smooth transition when selecting */
         display: flex; /* Enable Flexbox */
-        justify-content: center; /* Horizontally center the image */
-        align-items: center; /* Vertically center the image */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+  justify-content: center; /* Horizontally center the image */
+  align-items: center; /* Vertically center the image */
       }
     
       /* Selected game styles */
@@ -122,18 +121,9 @@
         gap: 32px;
       }
       .game-image {
-        width: 92%;
-        height: 92%;
+        width: 95%;
+        height: 95%;
         object-fit: cover; /* Ensure the image covers the entire div */
-      }
-      .game-image {
-        opacity: 0.5; /* Make the image 50% opaque */
-        transition: opacity 0.3s ease; /* Smooth transition for the opacity change */
-      }
-      
-      /* Selected game's image (full opacity) */
-      .game.selected .game-image {
-        opacity: 1; /* Full opacity for the selected game's image */
       }
 }
 

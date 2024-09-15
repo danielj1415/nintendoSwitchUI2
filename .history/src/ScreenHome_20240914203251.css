@@ -85,7 +85,7 @@
         display: flex; /* Enable Flexbox */
         justify-content: center; /* Horizontally center the image */
         align-items: center; /* Vertically center the image */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
       }
     
       /* Selected game styles */
@@ -125,15 +125,6 @@
         width: 92%;
         height: 92%;
         object-fit: cover; /* Ensure the image covers the entire div */
-      }
-      .game-image {
-        opacity: 0.5; /* Make the image 50% opaque */
-        transition: opacity 0.3s ease; /* Smooth transition for the opacity change */
-      }
-      
-      /* Selected game's image (full opacity) */
-      .game.selected .game-image {
-        opacity: 1; /* Full opacity for the selected game's image */
       }
 }
 
