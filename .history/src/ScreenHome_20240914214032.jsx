@@ -7,7 +7,7 @@ import gamePV from "./assets/games/gamePV.png";
 import gameANCH from "./assets/games/gameANCH.png";
 import gameMK8D from "./assets/games/gameMK8D.png";
 import gamePLA from "./assets/games/gamePLA.png";
-import imageProfile from "./assets//images/imageProfileKirby.jpg";
+import imageProfile from "./assets//images/imageProfile.png";
 
 function ScreenHome(){
     const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
@@ -48,10 +48,7 @@ function ScreenHome(){
         <div>
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
-            <div className = "profileIconContainer">
-                <p className = "profileFriends">3</p>
-                <img src = {imageProfile} className = "imageProfile"/>
-            </div>
+            
             <div className="square-row">
             {games.map((game, index) => (
                 <div

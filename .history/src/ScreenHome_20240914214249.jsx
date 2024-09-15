@@ -48,10 +48,7 @@ function ScreenHome(){
         <div>
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
-            <div className = "profileIconContainer">
-                <p className = "profileFriends">3</p>
-                <img src = {imageProfile} className = "imageProfile"/>
-            </div>
+            <img src = {imageProfile} className = "imageProfile"/>
             <div className="square-row">
             {games.map((game, index) => (
                 <div

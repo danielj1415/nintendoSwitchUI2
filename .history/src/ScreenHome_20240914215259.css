@@ -42,10 +42,6 @@
     background-color: rgba(255, 255, 255, 0.2); /* Add some transparency */
     backdrop-filter: blur(15px); /* Apply the blur effect to the background */
     transition: all 0.3s ease; /* Smooth transition when selecting */
-    display: flex; /* Enable Flexbox */
-        justify-content: center; /* Horizontally center the image */
-        align-items: center; /* Vertically center the image */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
   }
 
   /* Selected game styles */
@@ -64,7 +60,6 @@
     height: 100px;
     top: -100px;
     width: 600px;
-    
   }
 
   .game-name-text{
@@ -87,12 +82,9 @@
     opacity: 1; /* Full opacity for the selected game's image */
   }
 
-  .profileIconContainer{
+  .profileIconContainer {
     display: flex;
-    flex-direction: column; /* Ensure the number and image are stacked vertically */
-    align-items: center; /* Center the number and image horizontally */
-    justify-content: center; /* Vertically align the content */
-    gap: 8px;
+    align-items: center;
   }
 
   .imageProfile{

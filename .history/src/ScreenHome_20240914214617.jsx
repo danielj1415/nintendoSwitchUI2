@@ -49,7 +49,7 @@ function ScreenHome(){
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
             <div className = "profileIconContainer">
-                <p className = "profileFriends">3</p>
+                <p>3</p>
                 <img src = {imageProfile} className = "imageProfile"/>
             </div>
             <div className="square-row">
