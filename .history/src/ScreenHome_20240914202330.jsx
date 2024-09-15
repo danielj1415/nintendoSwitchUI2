@@ -48,21 +48,16 @@ function ScreenHome(){
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
             <div className="square-row">
-            {games.map((game, index) => (
-                <div
-                key={index}
-                className={`game ${selectedGame === index ? "selected" : ""}`}
-                onClick={() => setSelectedGame(index)} // Click to select the game
-                >
-                <img src={game.image} alt={game.name} className="game-image" />
-                {selectedGame === index && (
-                    <div className="game-name">
-                    <p className="game-name-text">{game.name}</p>
-                    </div>
-                )}
-                </div>
-            ))}
+            {squares.map((gameName, index) => (
+            <div
+              key={index}
+              className={`game ${selectedGame === index ? "selected" : ""}`}
+              onClick={() => setSelectedGame(index)} // Click to select the game
+            >
+              {selectedGame === index && <div className="game-name"><p className = "game-name-text">{gameName}</p></div>} {/* Show the name if selected */}
             </div>
+          ))}
+                </div>
             </div>
         </div>
     )

@@ -6,7 +6,6 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
   }
   
   /* Set the image to cover the entire container */
@@ -32,6 +31,7 @@
     transform: translateY(-240px); /* Adjust the top positioning for perfect centering */
     margin-left: 80px;
     gap: 32px;
+    overflow-x: hidden;
   }
   
   /* Individual squares */
@@ -112,13 +112,7 @@
         margin-left: 80px;
         gap: 32px;
       }
-      .game-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensure the image covers the entire div */
-      }
 }
-
   
   
   

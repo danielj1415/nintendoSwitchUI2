@@ -10,15 +10,6 @@ import gamePLA from "./assets/games/gamePLA.png";
 
 function ScreenHome(){
     const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
-    const games = [
-        { name: "Super Smash Bros: Ultimate", image: gameSSBU },
-        { name: "Pokemon Violet", image: gamePV },
-        { name: "Animal Crossing: New Horizons", image: gameANCH },
-        { name: "Mario Kart 8 Deluxe", image: gameMK8D },
-        { name: "Pokemon Legends: Arceus", image: gamePLA },
-        { name: "Game 6", image: null }, // Add corresponding images for these games
-        { name: "Game 7", image: null }, // Add corresponding images for these games
-      ];
 
     const [selectedGame, setSelectedGame] = useState(0);
 
@@ -48,21 +39,16 @@ function ScreenHome(){
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
             <div className="square-row">
-            {games.map((game, index) => (
-                <div
-                key={index}
-                className={`game ${selectedGame === index ? "selected" : ""}`}
-                onClick={() => setSelectedGame(index)} // Click to select the game
-                >
-                <img src={game.image} alt={game.name} className="game-image" />
-                {selectedGame === index && (
-                    <div className="game-name">
-                    <p className="game-name-text">{game.name}</p>
-                    </div>
-                )}
-                </div>
-            ))}
+            {squares.map((gameName, index) => (
+            <div
+              key={index}
+              className={`game ${selectedGame === index ? "selected" : ""}`}
+              onClick={() => setSelectedGame(index)} // Click to select the game
+            >
+              {selectedGame === index && <div className="game-name"><p className = "game-name-text">{gameName}</p></div>} {/* Show the name if selected */}
             </div>
+          ))}
+                </div>
             </div>
         </div>
     )
