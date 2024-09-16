@@ -30,7 +30,6 @@ function ScreenHome(){
     const [selectedGame, setSelectedGame] = useState(0);
     const [selectedIcon, setSelectedIcon] = useState(null);
     const gameToIconMap = [0, 2, 4, 6];
-    const iconToGameMap = [0, 1, 1, 2, 2, 3, 3]; // Icons 1 and 2 -> Game 1, Icons 3 and 4 -> Game 2, etc.
 
     const iconData = [
         { src: iconRow1, className: "icons" },
@@ -45,34 +44,33 @@ function ScreenHome(){
   // Handle keyboard navigation
 useEffect(() => {
     const handleKeyDown = (event) => {
-        if (selectedIcon === null) {
-            // Navigating the games
-            if (event.key === "ArrowRight") {
-              event.preventDefault();
-              setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
-            } else if (event.key === "ArrowLeft") {
-              event.preventDefault();
-              setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
-            } else if (event.key === "ArrowDown") {
-              event.preventDefault();
-              // Switch from game to icon
-              setSelectedIcon(gameToIconMap[selectedGame % gameToIconMap.length]); // Go to mapped icon
-            }
-          } else {
-            // Navigating the icons
-            if (event.key === "ArrowRight") {
-              event.preventDefault();
-              setSelectedIcon((prev) => (prev + 1) % iconData.length); // Move to the next icon
-            } else if (event.key === "ArrowLeft") {
-              event.preventDefault();
-              setSelectedIcon((prev) => (prev - 1 + iconData.length) % iconData.length); // Move to the previous icon
-            } else if (event.key === "ArrowUp") {
-              event.preventDefault();
-              // Switch back from icon to game
-              setSelectedGame(iconToGameMap[selectedIcon]); // Switch to the game corresponding to the current icon
-              setSelectedIcon(null); // Deselect icon
-            }
-          }
+      if (selectedIcon === null) {
+        // Navigating the games
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
+        } else if (event.key === "ArrowDown") {
+          event.preventDefault();
+          // Switch from game to icon
+          setSelectedIcon(gameToIconMap[selectedGame % gameToIconMap.length]); // Go to mapped icon
+        }
+      } else {
+        // Navigating the icons
+        if (event.key === "ArrowRight") {
+          event.preventDefault();
+          setSelectedIcon((prev) => (prev + 1) % iconData.length); // Move to the next icon
+        } else if (event.key === "ArrowLeft") {
+          event.preventDefault();
+          setSelectedIcon((prev) => (prev - 1 + iconData.length) % iconData.length); // Move to the previous icon
+        } else if (event.key === "ArrowUp") {
+          event.preventDefault();
+          // Switch back from icon to game
+          setSelectedIcon(null); // Deselect icon
+        }
+      }
     };
   
     // Add event listener for keydown

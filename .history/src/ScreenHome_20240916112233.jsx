@@ -28,9 +28,7 @@ function ScreenHome(){
         { name: "Game 7", image: null }, // Add corresponding images for these games
       ];
     const [selectedGame, setSelectedGame] = useState(0);
-    const [selectedIcon, setSelectedIcon] = useState(null);
-    const gameToIconMap = [0, 2, 4, 6];
-    const iconToGameMap = [0, 1, 1, 2, 2, 3, 3]; // Icons 1 and 2 -> Game 1, Icons 3 and 4 -> Game 2, etc.
+    const [selectedIcon, setSelectedIcon] = useState(0);
 
     const iconData = [
         { src: iconRow1, className: "icons" },
@@ -42,48 +40,26 @@ function ScreenHome(){
         { src: iconRow7, className: "iconRowImage" }
     ];
 
-  // Handle keyboard navigation
-useEffect(() => {
+    // Handle keyboard navigation
+  useEffect(() => {
     const handleKeyDown = (event) => {
-        if (selectedIcon === null) {
-            // Navigating the games
-            if (event.key === "ArrowRight") {
-              event.preventDefault();
-              setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
-            } else if (event.key === "ArrowLeft") {
-              event.preventDefault();
-              setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
-            } else if (event.key === "ArrowDown") {
-              event.preventDefault();
-              // Switch from game to icon
-              setSelectedIcon(gameToIconMap[selectedGame % gameToIconMap.length]); // Go to mapped icon
-            }
-          } else {
-            // Navigating the icons
-            if (event.key === "ArrowRight") {
-              event.preventDefault();
-              setSelectedIcon((prev) => (prev + 1) % iconData.length); // Move to the next icon
-            } else if (event.key === "ArrowLeft") {
-              event.preventDefault();
-              setSelectedIcon((prev) => (prev - 1 + iconData.length) % iconData.length); // Move to the previous icon
-            } else if (event.key === "ArrowUp") {
-              event.preventDefault();
-              // Switch back from icon to game
-              setSelectedGame(iconToGameMap[selectedIcon]); // Switch to the game corresponding to the current icon
-              setSelectedIcon(null); // Deselect icon
-            }
-          }
+      if (event.key === "ArrowRight") {
+        event.preventDefault(); // Prevent the default horizontal page scroll
+        setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
+      } else if (event.key === "ArrowLeft") {
+        event.preventDefault(); // Prevent the default horizontal page scroll
+        setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
+      }
     };
-  
+
     // Add event listener for keydown
     window.addEventListener("keydown", handleKeyDown);
-  
+
     // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedGame, selectedIcon, squares.length, iconData.length, gameToIconMap]);
-  
+  }, [squares.length]); // Re-run effect when the length of squares changes
 
     return(
         <div>
@@ -111,8 +87,7 @@ useEffect(() => {
             </div>
             <div className="circle-row">
                 {iconData.map((icon, index) => (
-                  <div key={index} className={`iconRowCircle ${selectedIcon === index ? "selectedIcon" : ""}`} 
-                  onClick={() => setSelectedIcon(index)}>
+                  <div key={index} className={`iconRowCircle ${selectedIcon === index ? "selectedIcon" : ""}`} >
                     <img src={icon.src} className={icon.className} alt={`Icon ${index + 1}`} />
                   </div>
                 ))}
