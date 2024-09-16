@@ -50,8 +50,8 @@
 
   /* Selected game styles */
 .game.selected {
-    width: 440px; /* Increase the size of the selected game */
-    height: 440px;
+    width: 460px; /* Increase the size of the selected game */
+    height: 460px;
     transform: translateY(-60px);
   }
   

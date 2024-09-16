@@ -22,7 +22,7 @@ function ScreenHome(){
       ];
     const [selectedGame, setSelectedGame] = useState(0);
 
-    const icons = new Array(7).fill(0);
+    const icons = new Array(6).fill(0);
 
     // Handle keyboard navigation
   useEffect(() => {

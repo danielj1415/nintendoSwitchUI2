@@ -37,8 +37,8 @@
   /* Individual squares */
   .game {
     flex-shrink: 0;
-    width: 360px;
-    height: 360px;
+    width: 380px;
+    height: 380px;
     background-color: rgba(255, 255, 255, 0.2); /* Add some transparency */
     backdrop-filter: blur(15px); /* Apply the blur effect to the background */
     transition: all 0.3s ease; /* Smooth transition when selecting */
@@ -50,8 +50,8 @@
 
   /* Selected game styles */
 .game.selected {
-    width: 440px; /* Increase the size of the selected game */
-    height: 440px;
+    width: 460px; /* Increase the size of the selected game */
+    height: 460px;
     transform: translateY(-60px);
   }
   
@@ -96,8 +96,8 @@
   }
 
   .imageProfile{
-    width: 48px;
-    height: 48px;
+    width: 64px;
+    height: 64px;
     border-radius: 50%;
     border: 3px solid #43D6DF;
     margin-top: -24px;
@@ -112,8 +112,6 @@
   .circle-row{
     display: flex;
     gap: 28px;
-    justify-content: center;
-    margin-top: 120px;
   }
 
   .icons{

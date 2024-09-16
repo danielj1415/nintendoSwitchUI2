@@ -22,8 +22,6 @@ function ScreenHome(){
       ];
     const [selectedGame, setSelectedGame] = useState(0);
 
-    const icons = new Array(7).fill(0);
-
     // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -68,13 +66,6 @@ function ScreenHome(){
                 )}
                 </div>
             ))}
-            </div>
-            <div className = "circle-row">
-            {
-                icons.map((_, index)=> (
-                    <div key={index} className = "icons"></div>
-                ))
-            }
             </div>
             </div>
         </div>
