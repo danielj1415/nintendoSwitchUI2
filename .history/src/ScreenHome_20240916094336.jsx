@@ -77,7 +77,7 @@ function ScreenHome(){
             ))}
             </div>
             <div className = "circle-row">
-                <img src = {iconRow1} className = "icons"/>
+                <img src = {iconRow1} className = "iconsImage"/>
                 <div className = "iconRowCircle"><img src = {iconRow2} className = "iconRowImage"/></div>
             {/*
                 icons.map((_, index)=> (

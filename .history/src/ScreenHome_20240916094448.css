@@ -132,15 +132,10 @@
     background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
     backdrop-filter: blur(15px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .iconRowImage{
     display: flex;
-    width: 56px;
-    height: 56px;
   }
   
 

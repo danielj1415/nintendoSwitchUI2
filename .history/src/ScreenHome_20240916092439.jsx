@@ -9,11 +9,11 @@ import gameMK8D from "./assets/games/gameMK8D.png";
 import gamePLA from "./assets/games/gamePLA.png";
 import imageProfile from "./assets/images/imageProfileKirby.jpg";
 import iconRow1 from "./assets/icons/iconRow1.svg";
+
 import iconRow2 from "./assets/icons/iconRow2.svg";
 import iconRow3 from "./assets/icons/iconRow3.svg";
 import iconRow4 from "./assets/icons/iconRow4.svg";
 import iconRow5 from "./assets/icons/iconRow5.svg";
-import iconRow6 from "./assets/icons/iconRow6.png";
 import iconRow7 from "./assets/icons/iconRow7.svg";
 
 function ScreenHome(){
@@ -78,7 +78,12 @@ function ScreenHome(){
             </div>
             <div className = "circle-row">
                 <img src = {iconRow1} className = "icons"/>
-                <div className = "iconRowCircle"><img src = {iconRow2} className = "iconRowImage"/></div>
+                <img src = {iconRow2} className = "icons"/>
+                <img src = {iconRow3} className = "icons"/>
+                <img src = {iconRow4} className = "icons"/>
+                <img src = {iconRow5} className = "icons"/>
+                <img src = {iconRow6} className = "icons"/>
+                <img src = {iconRow7} className = "icons"/>
             {/*
                 icons.map((_, index)=> (
                     <div key={index} className = "icons"></div>
