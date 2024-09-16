@@ -13,7 +13,7 @@ import iconRow2 from "./assets/icons/iconRow2.svg";
 import iconRow3 from "./assets/icons/iconRow3.svg";
 import iconRow4 from "./assets/icons/iconRow4.svg";
 import iconRow5 from "./assets/icons/iconRow5.svg";
-import iconRow6 from "./assets/icons/iconRow6.svg";
+import iconRow6 from "./assets/icons/iconRow6.png";
 import iconRow7 from "./assets/icons/iconRow7.svg";
 
 function ScreenHome(){
@@ -29,15 +29,7 @@ function ScreenHome(){
       ];
     const [selectedGame, setSelectedGame] = useState(0);
 
-    const iconData = [
-        { src: iconRow1, className: "icons" },
-        { src: iconRow2, className: "iconRowImage" },
-        { src: iconRow3, className: "iconRowImage" },
-        { src: iconRow4, className: "iconRowImage" },
-        { src: iconRow5, className: "iconRowImage2" },
-        { src: iconRow6, className: "iconRowImage" },
-        { src: iconRow7, className: "iconRowImage" }
-    ];
+    const icons = new Array(6).fill(0);
 
     // Handle keyboard navigation
   useEffect(() => {
@@ -84,13 +76,18 @@ function ScreenHome(){
                 </div>
             ))}
             </div>
-            <div className="circle-row">
-                {iconData.map((icon, index) => (
-                  <div key={index} className="iconRowCircle">
-                    <img src={icon.src} className={icon.className} alt={`Icon ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
+            <div className = "circle-row">
+                <img src = {iconRow1} className = "icons"/>
+                <div className = "iconRowCircle"><img src = {iconRow2} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow3} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow4} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow5} className = "iconRowImage2"/></div>
+            {/*
+                icons.map((_, index)=> (
+                    <div key={index} className = "icons"></div>
+                ))*/
+            }
+            </div>
             </div>
         </div>
     )

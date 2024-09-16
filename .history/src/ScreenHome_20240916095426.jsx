@@ -84,13 +84,20 @@ function ScreenHome(){
                 </div>
             ))}
             </div>
-            <div className="circle-row">
-                {iconData.map((icon, index) => (
-                  <div key={index} className="iconRowCircle">
-                    <img src={icon.src} className={icon.className} alt={`Icon ${index + 1}`} />
-                  </div>
-                ))}
-              </div>
+            <div className = "circle-row">
+                <img src = {iconRow1} className = "icons"/>
+                <div className = "iconRowCircle"><img src = {iconRow2} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow3} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow4} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow5} className = "iconRowImage2"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow6} className = "iconRowImage"/></div>
+                <div className = "iconRowCircle"><img src = {iconRow7} className = "iconRowImage"/></div>
+            {/*
+                icons.map((_, index)=> (
+                    <div key={index} className = "icons"></div>
+                ))*/
+            }
+            </div>
             </div>
         </div>
     )
