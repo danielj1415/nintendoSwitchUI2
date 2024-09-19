@@ -226,13 +226,12 @@
         justify-content: space-between; /* Space the squares evenly */
         position: relative; /* Ensure it's positioned on top of the image */
         width: 100%; 
-        height: 360px; /* Adjust the height of the row */
+        height: 460px; /* Adjust the height of the row */
         z-index: 1; /* Ensure the row stays above the image */
         top: 50%; /* Vertically center the row */
         transform: translateY(-280px); /* Adjust the top positioning for perfect centering */
         margin-left: 80px;
         gap: 32px;
-
       }
       .game-image {
         width: 92%;
@@ -248,82 +247,6 @@
       .game.selected .game-image {
         opacity: 1; /* Full opacity for the selected game's image */
       }
-      .circle-row{
-        display: flex;
-        gap: 28px;
-        justify-content: center;
-        margin-top: 96px;
-        height: 1px;
-      }
-    
-      .icons{
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
-        backdrop-filter: blur(15px);
-      }
-    
-      .iconRowCircle{
-        width: 72px;
-        height: 72px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
-        backdrop-filter: blur(15px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-      }
-    
-      .iconRowImage{
-        width: 40px;
-        height: 40px;
-      }
-    
-      .iconRowImage2{
-        width: 48px;
-        height: 48px;
-        margin-left: 4px;
-        margin-top: 4px;
-      }
-      
-      
-    .selectedIcon {
-      position: relative;
-    }
-    
-    .selectedIcon::before {
-      content: "";
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      width: calc(100%);
-      height: calc(100%);
-      border: 4px solid #43D6DF;
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .bottomMenu{
-      margin-left: 80px;
-      margin-right: 80px;
-      height: 1px;
-      margin-top: 108px;
-    }
-  
-    .lineDivider{
-      height: 2px;
-      width:auto;
-      background-color: #ffffff;
-    }
-  
-    .iconSwitchLight{
-      width: 96px;
-      height: 64px;
-      margin-top: 24px;
-    }
 }
 
   

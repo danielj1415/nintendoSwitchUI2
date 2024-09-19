@@ -253,7 +253,7 @@
         gap: 28px;
         justify-content: center;
         margin-top: 96px;
-        height: 1px;
+        background-color: blue;
       }
     
       .icons{
@@ -306,12 +306,7 @@
       border-radius: 50%;
       pointer-events: none;
     }
-    .bottomMenu{
-      margin-left: 80px;
-      margin-right: 80px;
-      height: 1px;
-      margin-top: 108px;
-    }
+    
   
     .lineDivider{
       height: 2px;

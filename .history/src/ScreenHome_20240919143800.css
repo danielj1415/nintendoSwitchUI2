@@ -253,7 +253,6 @@
         gap: 28px;
         justify-content: center;
         margin-top: 96px;
-        height: 1px;
       }
     
       .icons{
@@ -309,8 +308,7 @@
     .bottomMenu{
       margin-left: 80px;
       margin-right: 80px;
-      height: 1px;
-      margin-top: 108px;
+      margin-top: 72px;
     }
   
     .lineDivider{

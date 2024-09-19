@@ -253,7 +253,7 @@
         gap: 28px;
         justify-content: center;
         margin-top: 96px;
-        height: 1px;
+        background-color: blue;
       }
     
       .icons{
@@ -310,7 +310,7 @@
       margin-left: 80px;
       margin-right: 80px;
       height: 1px;
-      margin-top: 108px;
+      background-color: red;
     }
   
     .lineDivider{
@@ -322,7 +322,7 @@
     .iconSwitchLight{
       width: 96px;
       height: 64px;
-      margin-top: 24px;
+
     }
 }
 
