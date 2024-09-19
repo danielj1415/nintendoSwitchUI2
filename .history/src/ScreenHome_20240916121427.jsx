@@ -16,7 +16,6 @@ import iconRow4 from "./assets/icons/iconRow4.svg";
 import iconRow5 from "./assets/icons/iconRow5.svg";
 import iconRow6 from "./assets/icons/iconRow6.svg";
 import iconRow7 from "./assets/icons/iconRow7.svg";
-import iconSwitchLight from "./assets/icons/iconSwitchLight.svg";
 
 function ScreenHome(){
     const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
@@ -121,11 +120,7 @@ useEffect(() => {
                     <img src={icon.src} className={icon.className} alt={`Icon ${index + 1}`} />
                   </div>
                 ))}
-            </div>
-            <div className = "bottomMenu">
-              <div className = "lineDivider"></div>
-              <img src = {iconSwitchLight} className = "iconSwitchLight"/>
-            </div>
+              </div>
             </div>
         </div>
     )

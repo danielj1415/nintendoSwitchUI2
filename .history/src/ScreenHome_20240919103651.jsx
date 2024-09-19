@@ -122,10 +122,8 @@ useEffect(() => {
                   </div>
                 ))}
             </div>
-            <div className = "bottomMenu">
-              <div className = "lineDivider"></div>
-              <img src = {iconSwitchLight} className = "iconSwitchLight"/>
-            </div>
+            <div className = "lineDivider"></div>
+            <div className = "bottomMenu"></div>
             </div>
         </div>
     )
