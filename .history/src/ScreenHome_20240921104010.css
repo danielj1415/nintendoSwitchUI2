@@ -329,16 +329,10 @@
   .lineDivider{
     height: 2px;
     width:auto;
-    background-color: white;
+    background-color: red;
   }
   .square-row {
     transform: translateY(-320px); /* Adjust the top positioning for perfect centering */
-  }
-  .circle-row{
-    margin-top: 72px;
-  }
-  .bottomMenu{
-    margin-top: 48px;
   }
 }
   

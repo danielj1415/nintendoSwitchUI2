@@ -232,6 +232,7 @@
         transform: translateY(-280px); /* Adjust the top positioning for perfect centering */
         margin-left: 80px;
         gap: 32px;
+
       }
       .game-image {
         width: 92%;
@@ -330,15 +331,6 @@
     height: 2px;
     width:auto;
     background-color: white;
-  }
-  .square-row {
-    transform: translateY(-320px); /* Adjust the top positioning for perfect centering */
-  }
-  .circle-row{
-    margin-top: 72px;
-  }
-  .bottomMenu{
-    margin-top: 48px;
   }
 }
   

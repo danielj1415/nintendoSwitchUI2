@@ -329,7 +329,7 @@
   .lineDivider{
     height: 2px;
     width:auto;
-    background-color: white;
+    background-color: red;
   }
   .square-row {
     transform: translateY(-320px); /* Adjust the top positioning for perfect centering */
