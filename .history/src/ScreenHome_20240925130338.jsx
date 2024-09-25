@@ -97,7 +97,7 @@ useEffect(() => {
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/> 
+            <img src = {WallpaperTwo} className = "wallpaper"/> 
             <div className = "profileIconContainer">
                 <p className = "profileFriends">3</p>
                 <img src = {imageProfile} className = "imageProfile"/>

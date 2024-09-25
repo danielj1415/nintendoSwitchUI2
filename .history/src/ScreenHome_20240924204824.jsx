@@ -17,8 +17,6 @@ import iconRow5 from "./assets/icons/iconRow5.svg";
 import iconRow6 from "./assets/icons/iconRow6.svg";
 import iconRow7 from "./assets/icons/iconRow7.svg";
 import iconSwitchLight from "./assets/icons/iconSwitchLight.svg";
-import iconALight from "./assets/icons/iconALight.svg";
-import iconOptionsLight from "./assets/icons/iconOptionsLight.svg";
 import { useNavigate } from "react-router-dom";
 
 function ScreenHome(){
@@ -49,40 +47,36 @@ function ScreenHome(){
 
   // Handle keyboard navigation
 useEffect(() => {
-  const handleKeyDown = (event) => {
-    if (event.key === "A" || event.key === "a") {
-      // Check if the selected icon is the settings icon (index 5)
-      if (selectedIcon === 5) {
-        // Navigate to the settings screen
-        navigate("/settings");
-      }
-    } else if (selectedIcon === null) {
-      // Navigating the games
-      if (event.key === "ArrowRight") {
-        event.preventDefault();
-        setSelectedGame((prev) => (prev + 1) % squares.length);
-      } else if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length);
-      } else if (event.key === "ArrowDown") {
-        event.preventDefault();
-        setSelectedIcon(gameToIconMap[selectedGame % gameToIconMap.length]);
-      }
-    } else {
-      // Navigating the icons
-      if (event.key === "ArrowRight") {
-        event.preventDefault();
-        setSelectedIcon((prev) => (prev + 1) % iconData.length);
-      } else if (event.key === "ArrowLeft") {
-        event.preventDefault();
-        setSelectedIcon((prev) => (prev - 1 + iconData.length) % iconData.length);
-      } else if (event.key === "ArrowUp") {
-        event.preventDefault();
-        setSelectedGame(iconToGameMap[selectedIcon]);
-        setSelectedIcon(null);
-      }
-    }
-  };
+    const handleKeyDown = (event) => {
+        if (selectedIcon === null) {
+            // Navigating the games
+            if (event.key === "ArrowRight") {
+              event.preventDefault();
+              setSelectedGame((prev) => (prev + 1) % squares.length); // Move to the next game
+            } else if (event.key === "ArrowLeft") {
+              event.preventDefault();
+              setSelectedGame((prev) => (prev - 1 + squares.length) % squares.length); // Move to the previous game
+            } else if (event.key === "ArrowDown") {
+              event.preventDefault();
+              // Switch from game to icon
+              setSelectedIcon(gameToIconMap[selectedGame % gameToIconMap.length]); // Go to mapped icon
+            }
+          } else {
+            // Navigating the icons
+            if (event.key === "ArrowRight") {
+              event.preventDefault();
+              setSelectedIcon((prev) => (prev + 1) % iconData.length); // Move to the next icon
+            } else if (event.key === "ArrowLeft") {
+              event.preventDefault();
+              setSelectedIcon((prev) => (prev - 1 + iconData.length) % iconData.length); // Move to the previous icon
+            } else if (event.key === "ArrowUp") {
+              event.preventDefault();
+              // Switch back from icon to game
+              setSelectedGame(iconToGameMap[selectedIcon]); // Switch to the game corresponding to the current icon
+              setSelectedIcon(null); // Deselect icon
+            }
+          }
+    };
   
     // Add event listener for keydown
     window.addEventListener("keydown", handleKeyDown);
@@ -97,7 +91,7 @@ useEffect(() => {
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/> 
+            <img src = {WallpaperTwo} className = "wallpaper"/> 
             <div className = "profileIconContainer">
                 <p className = "profileFriends">3</p>
                 <img src = {imageProfile} className = "imageProfile"/>
@@ -131,15 +125,7 @@ useEffect(() => {
             </div>
             <div className = "bottomMenu">
               <div className = "lineDivider"></div>
-              <div className = "bottomMenuRow">
-                <img src = {iconSwitchLight} className = "iconSwitchLight"/>
-                <div className = "bottomMenuRowIcons">
-                  <img src = {iconOptionsLight} className = "iconOptions marginRight20"/>
-                  <p className = "bottomMenuRowText">Options</p>
-                  <img src = {iconALight} className = "iconA marginRight20 marginLeft84"/>
-                  <p className = "bottomMenuRowText">Start</p>
-                </div>
-              </div>
+              <img src = {iconSwitchLight} className = "iconSwitchLight"/>
             </div>
             </div>
         </div>

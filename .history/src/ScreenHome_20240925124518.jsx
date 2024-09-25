@@ -97,7 +97,7 @@ useEffect(() => {
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/> 
+            <img src = {WallpaperTwo} className = "wallpaper"/> 
             <div className = "profileIconContainer">
                 <p className = "profileFriends">3</p>
                 <img src = {imageProfile} className = "imageProfile"/>
@@ -134,10 +134,8 @@ useEffect(() => {
               <div className = "bottomMenuRow">
                 <img src = {iconSwitchLight} className = "iconSwitchLight"/>
                 <div className = "bottomMenuRowIcons">
-                  <img src = {iconOptionsLight} className = "iconOptions marginRight20"/>
-                  <p className = "bottomMenuRowText">Options</p>
-                  <img src = {iconALight} className = "iconA marginRight20 marginLeft84"/>
-                  <p className = "bottomMenuRowText">Start</p>
+                  <img src = {iconALight}/>
+                  <img src = {iconOptionsLight}/>
                 </div>
               </div>
             </div>

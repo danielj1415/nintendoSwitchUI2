@@ -181,16 +181,15 @@
 
   .iconSwitchLight{
     width: 96px;
-    height: 44px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+    height: 64px;
+    
   }
 
   .bottomMenuRow{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
   .bottomMenuRowIcons{
@@ -204,22 +203,17 @@
   .iconA{
     width: 36px;
     height: 36px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
   }
 
   .iconOptions{
     width: 36px;
     height: 36px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
   }
 
   .bottomMenuRowText{
     font-family: "Nintendo Switch UI";
     color: white;
     font-size: 26px;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
   }
 
   .marginRight20{

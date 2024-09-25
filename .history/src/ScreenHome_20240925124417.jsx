@@ -17,8 +17,6 @@ import iconRow5 from "./assets/icons/iconRow5.svg";
 import iconRow6 from "./assets/icons/iconRow6.svg";
 import iconRow7 from "./assets/icons/iconRow7.svg";
 import iconSwitchLight from "./assets/icons/iconSwitchLight.svg";
-import iconALight from "./assets/icons/iconALight.svg";
-import iconOptionsLight from "./assets/icons/iconOptionsLight.svg";
 import { useNavigate } from "react-router-dom";
 
 function ScreenHome(){
@@ -97,7 +95,7 @@ useEffect(() => {
     return(
         <div>
             <div className = "homeScreen">
-            <img src = {WallpaperOne} className = "wallpaper"/> 
+            <img src = {WallpaperTwo} className = "wallpaper"/> 
             <div className = "profileIconContainer">
                 <p className = "profileFriends">3</p>
                 <img src = {imageProfile} className = "imageProfile"/>
@@ -134,10 +132,7 @@ useEffect(() => {
               <div className = "bottomMenuRow">
                 <img src = {iconSwitchLight} className = "iconSwitchLight"/>
                 <div className = "bottomMenuRowIcons">
-                  <img src = {iconOptionsLight} className = "iconOptions marginRight20"/>
-                  <p className = "bottomMenuRowText">Options</p>
-                  <img src = {iconALight} className = "iconA marginRight20 marginLeft84"/>
-                  <p className = "bottomMenuRowText">Start</p>
+                  
                 </div>
               </div>
             </div>
