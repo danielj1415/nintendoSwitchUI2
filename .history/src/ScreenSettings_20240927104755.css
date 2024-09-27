@@ -14,12 +14,11 @@
     display: flex;
     align-items: center;
     background-color: #F0F0F0;
-    height: 142px;
 }
 
 .bottomMenuSettings{
     width: 100%;
-    height: 116px;
+    height: 118px;
     background-color: #F0F0F0;
 }
 
@@ -61,7 +60,7 @@
     height: 3px;
     margin-left:48px;
     margin-right: 48px;
-    background-color: #BDBDBD;
+    background-color: red;
     justify-content: center;
 }
 

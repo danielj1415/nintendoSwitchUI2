@@ -5,13 +5,7 @@ import iconBrightnessLight from "./assets/icons/iconBrightnessLight.svg";
 function ScreenSettings(){
     return(
         <div className = "settingsScreen">
-            <div className = "topMenuSettings">
-                <div className = "topMenuRow">
-                    <img src = {iconBrightnessLight} className = "iconBrightnessLight marginRight28 marginLeft108"/>
-                    <p className = "headingText">System Settings</p>
-                </div>
-                <div className = "divider"/>
-            </div>
+            <div className = "topMenuSettings"></div>
             <div className = "middleMenuSettings">
                 <div className="leftMenuSettings">
 

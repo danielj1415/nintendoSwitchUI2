@@ -7,19 +7,25 @@
 
 .topMenuSettings{
     width: 100%;
+    height: 142px;
     background-color: #F0F0F0;
 }
 
-.topMenuRow{
+.topMenuRow {
     display: flex;
     align-items: center;
+    justify-content: start;
+    width: 95%;
+    border-bottom: 3px solid black; /* 3px bottom border */
+    margin: 0 auto; /* Centering the div */
     background-color: #F0F0F0;
-    height: 142px;
-}
+    padding-left: 2%;
+  }
+  
 
 .bottomMenuSettings{
     width: 100%;
-    height: 116px;
+    height: 118px;
     background-color: #F0F0F0;
 }
 
@@ -59,10 +65,8 @@
 
 .divider{
     height: 3px;
-    margin-left:48px;
-    margin-right: 48px;
-    background-color: #BDBDBD;
-    justify-content: center;
+    width: 95%;
+    background-color: red;
 }
 
 @media (max-height: 800px) and (min-height: 700px) 
