@@ -30,7 +30,7 @@
 .rightMenuSettings{
     width: 75%;
     height: 690px;
-    background-color: #F0F0F0;
+    background-color: blue;
 }
 
 @media (max-height: 800px) and (min-height: 700px) 

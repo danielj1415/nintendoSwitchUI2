@@ -1,5 +1,3 @@
-
-import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 import WallpaperTwo from "./assets/images/wallpaperTwo.png";
 import { useState, useEffect } from 'react'
@@ -21,7 +19,8 @@ import iconALight from "./assets/icons/iconALight.svg";
 import iconOptionsLight from "./assets/icons/iconOptionsLight.svg";
 import { useNavigate } from "react-router-dom";
 
-function ScreenHome(){
+
+function ScreenSettings(){
     const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
     const games = [
         { name: "Super Smash Bros: Ultimate", image: gameSSBU },
@@ -98,37 +97,6 @@ useEffect(() => {
         <div>
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
-            <div className = "profileIconContainer">
-                <p className = "profileFriends">3</p>
-                <img src = {imageProfile} className = "imageProfile"/>
-            </div>
-            <div className="square-row">
-            {games.map((game, index) => (
-                <div
-                key={index}
-                className={`game ${
-                    selectedIcon === null && selectedGame === index ? "selected" : ""
-                }`}
-                onClick={() => setSelectedGame(index)} // Click to select the game
-                >
-                <img src={game.image} alt={game.name} className="game-image" />
-                {selectedIcon === null && selectedGame === index && (
-                    <div className="game-name">
-                    <p className="game-name-text">{game.name}</p>
-                    </div>
-                )}
-                </div>
-            ))}
-            </div>
-
-            <div className="circle-row">
-                {iconData.map((icon, index) => (
-                  <div key={index} className={`iconRowCircle ${selectedIcon === index ? "selectedIcon" : ""}`} 
-                  onClick={() => setSelectedIcon(index)}>
-                    <img src={icon.src} className={icon.className} alt={`Icon ${index + 1}`} />
-                  </div>
-                ))}
-            </div>
             <div className="bottomMenu">
             <div className="lineDivider"></div>
             <div className="bottomMenuRow">
@@ -155,4 +123,4 @@ useEffect(() => {
     )
 }
 
-export default ScreenHome;
+export default ScreenSettings;

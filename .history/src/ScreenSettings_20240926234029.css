@@ -18,7 +18,9 @@
 }
 
 .middleMenuSettings{
-    display: flex;
+    width: 25%;
+    height: 690px;
+    background-color: #b1b1b1;
 }
 
 .leftMenuSettings{
@@ -28,9 +30,7 @@
 }
 
 .rightMenuSettings{
-    width: 75%;
-    height: 690px;
-    background-color: #F0F0F0;
+    
 }
 
 @media (max-height: 800px) and (min-height: 700px) 

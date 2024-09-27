@@ -17,20 +17,10 @@
     background-color: #F0F0F0;
 }
 
-.middleMenuSettings{
-    display: flex;
-}
-
-.leftMenuSettings{
+.sideMenuSettings{
     width: 25%;
-    height: 690px;
-    background-color: #F5F5F5;
-}
-
-.rightMenuSettings{
-    width: 75%;
-    height: 690px;
-    background-color: #F0F0F0;
+    height: 666px;
+    background-color: #b1b1b1;
 }
 
 @media (max-height: 800px) and (min-height: 700px) 

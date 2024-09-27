@@ -1,5 +1,3 @@
-
-import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 import WallpaperTwo from "./assets/images/wallpaperTwo.png";
 import { useState, useEffect } from 'react'
@@ -21,8 +19,10 @@ import iconALight from "./assets/icons/iconALight.svg";
 import iconOptionsLight from "./assets/icons/iconOptionsLight.svg";
 import { useNavigate } from "react-router-dom";
 
-function ScreenHome(){
-    const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
+
+function ScreenSettings(){
+    return(
+        const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
     const games = [
         { name: "Super Smash Bros: Ultimate", image: gameSSBU },
         { name: "Pokemon Violet", image: gamePV },
@@ -153,6 +153,7 @@ useEffect(() => {
             </div>
         </div>
     )
+    )
 }
 
-export default ScreenHome;
+export default ScreenSettings;

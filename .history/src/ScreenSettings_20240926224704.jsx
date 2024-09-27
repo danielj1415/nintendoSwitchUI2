@@ -1,5 +1,3 @@
-
-import "./ScreenHome.css";
 import WallpaperOne from "./assets/images/wallpaperOne.jpg";
 import WallpaperTwo from "./assets/images/wallpaperTwo.png";
 import { useState, useEffect } from 'react'
@@ -21,7 +19,8 @@ import iconALight from "./assets/icons/iconALight.svg";
 import iconOptionsLight from "./assets/icons/iconOptionsLight.svg";
 import { useNavigate } from "react-router-dom";
 
-function ScreenHome(){
+
+function ScreenSettings(){
     const squares = ["Super Smash Bros: Ultimate", "Pokemon Violet", "Animal Crossing: New Horizons", "Mario Kart 8 Deluxe", "Pokemon Legends: Arceus", "Game 6", "Game 7"]; // Array of game names
     const games = [
         { name: "Super Smash Bros: Ultimate", image: gameSSBU },
@@ -98,10 +97,7 @@ useEffect(() => {
         <div>
             <div className = "homeScreen">
             <img src = {WallpaperOne} className = "wallpaper"/> 
-            <div className = "profileIconContainer">
-                <p className = "profileFriends">3</p>
-                <img src = {imageProfile} className = "imageProfile"/>
-            </div>
+            
             <div className="square-row">
             {games.map((game, index) => (
                 <div
@@ -155,4 +151,4 @@ useEffect(() => {
     )
 }
 
-export default ScreenHome;
+export default ScreenSettings;
