@@ -19,12 +19,10 @@ function ScreenSettings(){
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
             );
           } else if (event.key === "ArrowUp") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
             );
@@ -54,11 +52,11 @@ function ScreenSettings(){
                 <div
                 key={index}
                 className={`leftMenuOptions ${
-                    selectedIndex === index ? "selectedOption" : "unselectedOption"
+                    selectedIndex === index ? "selectedOption" : ""
                 }`}
                 >
                 {selectedIndex === index && (
-                    <div className="selectedOptionLine marginLeft8 marginRight16" />
+                    <div className="selectedOptionLine" />
                 )}
                 <div>
                     <p className={`subheadingText`}>{option.name}</p>

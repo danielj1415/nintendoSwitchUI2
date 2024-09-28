@@ -10,21 +10,17 @@ function ScreenSettings(){
         { name: "Themes"},
         { name: "Wallpapers"},
         { name: "Notifications"},
-        { name: "Sleep Mode"},
+        //{ name: "Sleep Mode"},
         //{ name: "Airplane Mode"}, // Add corresponding images for these games
       ];
-
-      const [selectedIndex, setSelectedIndex] = useState(0);
 
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
             );
           } else if (event.key === "ArrowUp") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
             );
@@ -48,24 +44,27 @@ function ScreenSettings(){
                 </div>
                 <div className = "divider"/>
             </div>
-            <div className="middleMenuSettings">
-            <div className="leftMenuSettings">
-            {settingsOptions.map((option, index) => (
-                <div
-                key={index}
-                className={`leftMenuOptions ${
-                    selectedIndex === index ? "selectedOption" : "unselectedOption"
-                }`}
-                >
-                {selectedIndex === index && (
-                    <div className="selectedOptionLine marginLeft8 marginRight16" />
-                )}
-                <div>
-                    <p className={`subheadingText`}>{option.name}</p>
+            <div className = "middleMenuSettings">
+                <div className="leftMenuSettings">
+                    {
+                        settingsOptions.map((option, index) => (
+                            <div key = {index} className = "leftMenuOptions">
+                                <div>
+                                    <p className = {`subheadingText`}>{option.name}</p>
+                                </div>
+                                {index === 0 && (
+                                    <div className="square"></div>
+                                )}
+                            </div>
+                        ))
+                    }
+                    <div className = "selectedOption marginLeftselectedOption">
+                        <div className = "selectedOptionSub">
+                            <div className = "selectedOptionLine marginLeft8 marginRight16"/>
+                            <p className = "subheadingText">Sleep Mode</p>
+                        </div>
+                    </div>
                 </div>
-                </div>
-            ))}
-            </div>
                 <div className="rightMenuSettings">
 
                 </div>

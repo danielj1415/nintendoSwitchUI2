@@ -19,12 +19,10 @@ function ScreenSettings(){
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
             );
           } else if (event.key === "ArrowUp") {
-            event.preventDefault();
             setSelectedIndex((prevIndex) =>
               prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
             );
@@ -49,23 +47,25 @@ function ScreenSettings(){
                 <div className = "divider"/>
             </div>
             <div className="middleMenuSettings">
-            <div className="leftMenuSettings">
-            {settingsOptions.map((option, index) => (
-                <div
-                key={index}
-                className={`leftMenuOptions ${
-                    selectedIndex === index ? "selectedOption" : "unselectedOption"
-                }`}
-                >
-                {selectedIndex === index && (
-                    <div className="selectedOptionLine marginLeft8 marginRight16" />
-                )}
-                <div>
-                    <p className={`subheadingText`}>{option.name}</p>
+        <div className="leftMenuSettings">
+          {settingsOptions.map((option, index) => (
+            <div
+              key={index}
+              className={`leftMenuOptions ${
+                selectedIndex === index ? "selectedOption" : ""
+              }`}
+            >
+              <div>
+                <p className={`subheadingText`}>{option.name}</p>
+              </div>
+              {selectedIndex === index && (
+                <div className="selectedOptionSub">
+                  <div className="selectedOptionLine marginLeft8 marginRight16" />
                 </div>
-                </div>
-            ))}
+              )}
             </div>
+          ))}
+        </div>
                 <div className="rightMenuSettings">
 
                 </div>
