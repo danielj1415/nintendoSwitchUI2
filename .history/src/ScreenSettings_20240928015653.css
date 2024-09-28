@@ -72,6 +72,11 @@
         background-color: #C0C0C0; /* You can change the color of the square */
     }
 
+    .leftMenuOptions{
+        margin-left: 160px;
+        margin-top: 72px;
+    }
+
     .bottomMenuSettings{
         z-index: 1;
         position: absolute;
@@ -83,10 +88,10 @@
         border: 6px solid #43D6DF;
         display: flex; /* Use flexbox to align the blue line and text horizontally */
         align-items: center; /* Vertically center the items inside */
-        margin-left: 122px;
+        margin-left: 88px;
     }
     .unselectedOption{
-        margin-left: 160px;
+        margin-left: 122px;
         display: flex; /* Use flexbox to align the blue line and text horizontally */
         align-items: center; /* Vertically center the items inside */
     }
@@ -100,11 +105,11 @@
     }
 
     .marginRight16{
-        margin-right: 18px;
+        margin-right: 16px;
     }
 
     .marginLeftselectedOption{
-        margin-left: 88px;
+
     }
 
     .spacer{
@@ -114,10 +119,9 @@
     }
 
     .square {
-        width: 54%;    /* Set the width of the square */
+        width: 56%;    /* Set the width of the square */
         height: 3px;   /* Set the height of the square */
         background-color: #C0C0C0; /* You can change the color of the square */
-        margin-left: 160px;
     }
 
     .selectedOptionLine{

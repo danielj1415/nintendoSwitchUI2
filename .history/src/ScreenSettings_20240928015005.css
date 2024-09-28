@@ -72,58 +72,14 @@
         background-color: #C0C0C0; /* You can change the color of the square */
     }
 
+    .leftMenuOptions{
+        margin-left: 160px;
+        margin-top: 72px;
+    }
+
     .bottomMenuSettings{
         z-index: 1;
         position: absolute;
-    }
-    .selectedOption {
-        width: 432px;
-        height: 94px;
-        background-color: #FFFFFF;
-        border: 6px solid #43D6DF;
-        display: flex; /* Use flexbox to align the blue line and text horizontally */
-        align-items: center; /* Vertically center the items inside */
-        margin-left: 122px;
-    }
-    .unselectedOption{
-        margin-left: 160px;
-        display: flex; /* Use flexbox to align the blue line and text horizontally */
-        align-items: center; /* Vertically center the items inside */
-    }
-    .selectedOptionSub{
-        display: flex;
-        align-items: center;
-        height: 72px;
-    }
-    .marginLeft8{
-        margin-left: 8px;
-    }
-
-    .marginRight16{
-        margin-right: 18px;
-    }
-
-    .marginLeftselectedOption{
-        margin-left: 88px;
-    }
-
-    .spacer{
-        width: 4px;
-        height: 32px;
-        background-color: #F5F5F5;
-    }
-
-    .square {
-        width: 54%;    /* Set the width of the square */
-        height: 3px;   /* Set the height of the square */
-        background-color: #C0C0C0; /* You can change the color of the square */
-        margin-left: 160px;
-    }
-
-    .selectedOptionLine{
-        height: 72px;
-        width: 6px;
-        background-color: #0047FF;
     }
     
 
@@ -194,6 +150,7 @@
             align-items: center; /* Vertically center the items inside */
         }
         
+
         .selectedOptionSub{
             display: flex;
             align-items: center;
@@ -233,5 +190,7 @@
             margin-bottom: 16px;
         }
         
+        
+
         
     }

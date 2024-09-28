@@ -50,7 +50,6 @@ function ScreenSettings(){
             </div>
             <div className="middleMenuSettings">
             <div className="leftMenuSettings">
-            <div className = "spacer"/>
             {/* Render the first option separately */}
             {settingsOptions.slice(0, 1).map((option, index) => (
                 <div

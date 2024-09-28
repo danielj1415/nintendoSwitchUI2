@@ -50,7 +50,6 @@ function ScreenSettings(){
             </div>
             <div className="middleMenuSettings">
             <div className="leftMenuSettings">
-            <div className = "spacer"/>
             {/* Render the first option separately */}
             {settingsOptions.slice(0, 1).map((option, index) => (
                 <div
@@ -69,7 +68,7 @@ function ScreenSettings(){
                     <div className="lineAfterOption"></div>
                 </div>
             ))}
-            <div className = "square"/>
+
             {/* Render the remaining options */}
             {settingsOptions.slice(1).map((option, index) => (
             <div

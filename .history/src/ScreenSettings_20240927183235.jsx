@@ -51,43 +51,23 @@ function ScreenSettings(){
             <div className="middleMenuSettings">
             <div className="leftMenuSettings">
             <div className = "spacer"/>
-            {/* Render the first option separately */}
-            {settingsOptions.slice(0, 1).map((option, index) => (
+            {settingsOptions.map((option, index) => (
                 <div
-                    key={index}
-                    className={`leftMenuOptions ${
-                        selectedIndex === index ? "selectedOption" : "unselectedOption"
-                    }`}
-                >
-                    {selectedIndex === index && (
-                        <div className="selectedOptionLine marginLeft8 marginRight16" />
-                    )}
-                    <div>
-                        <p className={`subheadingText`}>{option.name}</p>
-                    </div>
-                    {/* Add a line after the first option */}
-                    <div className="lineAfterOption"></div>
-                </div>
-            ))}
-            <div className = "square"/>
-            {/* Render the remaining options */}
-            {settingsOptions.slice(1).map((option, index) => (
-            <div
-                key={index + 1}  // Offset index for the remaining items
+                key={index}
                 className={`leftMenuOptions ${
-                    selectedIndex === index + 1 ? "selectedOption" : "unselectedOption"
+                    selectedIndex === index ? "selectedOption" : "unselectedOption"
                 }`}
-            >
-                {selectedIndex === index + 1 && (
+                >
+                
+                {selectedIndex === index && (
                     <div className="selectedOptionLine marginLeft8 marginRight16" />
                 )}
                 <div>
                     <p className={`subheadingText`}>{option.name}</p>
                 </div>
-            </div>
+                </div>
             ))}
             </div>
-
                 <div className="rightMenuSettings">
 
                 </div>

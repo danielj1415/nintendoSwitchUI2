@@ -49,45 +49,28 @@ function ScreenSettings(){
                 <div className = "divider"/>
             </div>
             <div className="middleMenuSettings">
-            <div className="leftMenuSettings">
-            <div className = "spacer"/>
-            {/* Render the first option separately */}
-            {settingsOptions.slice(0, 1).map((option, index) => (
-                <div
-                    key={index}
-                    className={`leftMenuOptions ${
-                        selectedIndex === index ? "selectedOption" : "unselectedOption"
-                    }`}
-                >
-                    {selectedIndex === index && (
-                        <div className="selectedOptionLine marginLeft8 marginRight16" />
-                    )}
-                    <div>
-                        <p className={`subheadingText`}>{option.name}</p>
-                    </div>
-                    {/* Add a line after the first option */}
-                    <div className="lineAfterOption"></div>
+            <div className="middleMenuSettings">
+                <div className="leftMenuSettings">
+                    <div className="spacer"/>
+                    {settingsOptions.map((option, index) => (
+                        <div key={index}>
+                            <div className={`leftMenuOptions ${selectedIndex === index ? "selectedOption" : "unselectedOption"}`}>
+                                {selectedIndex === index && (
+                                    <div className="selectedOptionLine marginLeft8 marginRight16" />
+                                )}
+                                <div>
+                                    <p className={`subheadingText`}>{option.name}</p>
+                                </div>
+                            </div>
+                            {/* Render a line below the first option (index 0) */}
+                            {index === 0 && (
+                                <div className="lineBelowOption"></div>
+                            )}
+                        </div>
+                    ))}
                 </div>
-            ))}
-            <div className = "square"/>
-            {/* Render the remaining options */}
-            {settingsOptions.slice(1).map((option, index) => (
-            <div
-                key={index + 1}  // Offset index for the remaining items
-                className={`leftMenuOptions ${
-                    selectedIndex === index + 1 ? "selectedOption" : "unselectedOption"
-                }`}
-            >
-                {selectedIndex === index + 1 && (
-                    <div className="selectedOptionLine marginLeft8 marginRight16" />
-                )}
-                <div>
-                    <p className={`subheadingText`}>{option.name}</p>
-                </div>
+                <div className="rightMenuSettings"></div>
             </div>
-            ))}
-            </div>
-
                 <div className="rightMenuSettings">
 
                 </div>

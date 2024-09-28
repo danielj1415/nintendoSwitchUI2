@@ -114,10 +114,10 @@
     }
 
     .square {
-        width: 54%;    /* Set the width of the square */
+        width: 56%;    /* Set the width of the square */
         height: 3px;   /* Set the height of the square */
         background-color: #C0C0C0; /* You can change the color of the square */
-        margin-left: 160px;
+        margin-left: 124px;
     }
 
     .selectedOptionLine{
