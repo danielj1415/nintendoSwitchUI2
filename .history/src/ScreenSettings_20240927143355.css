@@ -1,0 +1,79 @@
+
+@import "./fonts.css";
+
+.topMenuSettings{
+    width: 100%;
+    background-color: #F0F0F0;
+}
+
+.topMenuRow{
+    display: flex;
+    align-items: center;
+    background-color: #F0F0F0;
+    height: 142px;
+}
+
+.bottomMenuSettings{
+    width: 100%;
+    height: 116px;
+    background-color: #F0F0F0;
+}
+
+.middleMenuSettings{
+    display: flex;
+}
+
+.leftMenuSettings{
+    width: 30%;
+    height: 690px;
+    background-color: #F5F5F5;
+}
+
+.rightMenuSettings{
+    width: 70%;
+    height: 690px;
+    background-color: #F0F0F0;
+}
+
+.iconBrightnessLight{
+    width: 66px;
+    height: 66px;
+}
+
+.headingText{
+    font-size: 34px;
+    font-family: "Nintendo Switch UI";
+}
+
+.marginRight28{
+    margin-right: 28px;
+}
+
+.marginLeft108{
+    margin-left: 108px;
+}
+
+.divider{
+    height: 3px;
+    margin-left:48px;
+    margin-right: 48px;
+    background-color: #BDBDBD;
+    justify-content: center;
+}
+
+.subheadingText{
+    font-family: "Nintendo Switch UI";
+    font-size: 30px;
+}
+
+.square {
+    width: 396px;    /* Set the width of the square */
+    height: 3px;   /* Set the height of the square */
+    background-color: #000; /* You can change the color of the square */
+    margin-bottom: 20px;  /* Add margin to give space to the next element */
+}
+
+@media (max-height: 800px) and (min-height: 700px) 
+{
+
+}

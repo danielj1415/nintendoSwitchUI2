@@ -67,9 +67,10 @@
 }
 
 .square {
-    width: 72%;    /* Set the width of the square */
+    width: 5%px;    /* Set the width of the square */
     height: 3px;   /* Set the height of the square */
     background-color: #C0C0C0; /* You can change the color of the square */
+    margin-bottom: 20px;  /* Add margin to give space to the next element */
 }
 
 .leftMenuOptions{
@@ -77,55 +78,7 @@
     margin-top: 72px;
 }
 
-.bottomMenuSettings{
-    z-index: -1;
-}
-
 @media (max-height: 800px) and (min-height: 700px) 
 {
-    .headingText{
-        font-size: 28px;
-        font-family: "Nintendo Switch UI";
-    }
-    .subheadingText{
-        font-family: "Nintendo Switch UI";
-        font-size: 24px;
-    }
-    .iconBrightnessLight{
-        width: 52px;
-        height: 52px;
-    }
-    .leftMenuOptions{
-        margin-left: 124px;
-        margin-top: 64px;
-    }
-    .marginRight28{
-        margin-right: 20px;
-    }
-    
-    .marginLeft108{
-        margin-left: 84px;
-    }
-    .topMenuRow{
-        display: flex;
-        align-items: center;
-        background-color: #F0F0F0;
-        height: 114px;
-    }
-    .bottomMenuSettings{
-        width: 100%;
-        height: 86px;
-        background-color: #F0F0F0;
-    }
-    .leftMenuSettings{
-        width: 35%;
-        height: 574px;
-        background-color: #F5F5F5;
-    }
-    
-    .rightMenuSettings{
-        width: 65%;
-        height: 574px;
-        background-color: #F0F0F0;
-    }
+
 }

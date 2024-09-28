@@ -99,33 +99,4 @@
         margin-left: 124px;
         margin-top: 64px;
     }
-    .marginRight28{
-        margin-right: 20px;
-    }
-    
-    .marginLeft108{
-        margin-left: 84px;
-    }
-    .topMenuRow{
-        display: flex;
-        align-items: center;
-        background-color: #F0F0F0;
-        height: 114px;
-    }
-    .bottomMenuSettings{
-        width: 100%;
-        height: 86px;
-        background-color: #F0F0F0;
-    }
-    .leftMenuSettings{
-        width: 35%;
-        height: 574px;
-        background-color: #F5F5F5;
-    }
-    
-    .rightMenuSettings{
-        width: 65%;
-        height: 574px;
-        background-color: #F0F0F0;
-    }
 }

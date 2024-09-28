@@ -119,13 +119,13 @@
     }
     .leftMenuSettings{
         width: 35%;
-        height: 574px;
+        height: 570px;
         background-color: #F5F5F5;
     }
     
     .rightMenuSettings{
         width: 65%;
-        height: 574px;
+        height: 570px;
         background-color: #F0F0F0;
     }
 }

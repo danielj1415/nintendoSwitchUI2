@@ -130,25 +130,25 @@ useEffect(() => {
                 ))}
             </div>
             <div className="bottomMenu">
-              <div className="lineDivider"></div>
-              <div className="bottomMenuRow">
-                <img src={iconSwitchLight} className="iconSwitchLight" />
-                <div className="bottomMenuRowIcons">
-                  {selectedIcon === null ? (
-                    <>
-                      <img src={iconOptionsLight} className="iconOptions marginRight20" />
-                      <p className="bottomMenuRowText">Options</p>
-                      <img src={iconALight} className="iconA marginRight20 marginLeft84" />
-                      <p className="bottomMenuRowText">Start</p>
-                    </>
-                  ) : (
-                    <>
-                      <img src={iconALight} className="iconA marginRight20 marginLeft84" />
-                      <p className="bottomMenuRowText">OK</p>
-                    </>
-                  )}
-                </div>
+            <div className="lineDivider"></div>
+            <div className="bottomMenuRow">
+              <img src={iconSwitchLight} className="iconSwitchLight" />
+              <div className="bottomMenuRowIcons">
+                {selectedIcon === null ? (
+                  <>
+                    <img src={iconOptionsLight} className="iconOptions marginRight20" />
+                    <p className="bottomMenuRowText">Options</p>
+                    <img src={iconALight} className="iconA marginRight20 marginLeft84" />
+                    <p className="bottomMenuRowText">Start</p>
+                  </>
+                ) : (
+                  <>
+                    <img src={iconALight} className="iconA marginRight20 marginLeft84" />
+                    <p className="bottomMenuRowText">OK</p>
+                  </>
+                )}
               </div>
+            </div>
             </div>
             </div>
         </div>

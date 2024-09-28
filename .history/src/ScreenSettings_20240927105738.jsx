@@ -4,13 +4,15 @@ import iconBrightnessLight from "./assets/icons/iconBrightnessLight.svg";
 
 function ScreenSettings(){
 
+    const settingsOptionss = ["Support/Health % Safety", "Themes", "Wallpapers", "Notifications", "Sleep Mode", "Airplane Mode", "Screen Brightness"]
     const settingsOptions = [
-        { name: "Support/Health & Safety"},
-        { name: "Themes"},
-        { name: "Wallpapers"},
-        { name: "Notifications"},
-        { name: "Sleep Mode"},
-        { name: "Airplane Mode"}, // Add corresponding images for these games
+        { name: "Super Smash Bros: Ultimate"},
+        { name: "Pokemon Violet"},
+        { name: "Animal Crossing: New Horizons"},
+        { name: "Mario Kart 8 Deluxe"},
+        { name: "Pokemon Legends: Arceus"},
+        { name: "Game 6"}, // Add corresponding images for these games
+        { name: "Game 7", image: null }, // Add corresponding images for these games
       ];
 
     return(
@@ -26,11 +28,8 @@ function ScreenSettings(){
                 <div className="leftMenuSettings">
                     {
                         settingsOptions.map((option, index) => (
-                            <div key = {index} className = "leftMenuOptions">
-                                <p className = "subheadingText">{option.name}</p>
-                                {index === 8 && (
-                                    <div className="square"></div>
-                                )}
+                            <div key = {index}>
+
                             </div>
                         ))
                     }
