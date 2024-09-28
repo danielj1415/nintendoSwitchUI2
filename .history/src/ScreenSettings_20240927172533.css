@@ -70,7 +70,6 @@
     width: 72%;    /* Set the width of the square */
     height: 3px;   /* Set the height of the square */
     background-color: #C0C0C0; /* You can change the color of the square */
-    margin-top: 50px;
 }
 
 .leftMenuOptions{
@@ -129,40 +128,5 @@
         width: 65%;
         height: 574px;
         background-color: #F0F0F0;
-    }
-
-    .marginLeft124{
-        margin-left: 124px;
-    }
-
-    .selectedOption{
-        width: 318px;
-        height: 72px;
-        background-color: #FFFFFF;
-        border: 6px solid #43D6DF;
-    }
-
-    .selectedOptionSub{
-        display: flex;
-        align-items: center;
-        height: 72px;
-    }
-
-    .selectedOptionLine{
-        height: 56px;
-        width: 4px;
-        background-color: #0047FF;
-    }
-
-    .marginLeft8{
-        margin-left: 8px;
-    }
-
-    .marginRight16{
-        margin-right: 16px;
-    }
-
-    .marginLeftselectedOption{
-        margin-left: 88px;
     }
 }

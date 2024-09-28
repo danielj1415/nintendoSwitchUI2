@@ -9,8 +9,8 @@ function ScreenSettings(){
         { name: "Themes"},
         { name: "Wallpapers"},
         { name: "Notifications"},
-        //{ name: "Sleep Mode"},
-        //{ name: "Airplane Mode"}, // Add corresponding images for these games
+        { name: "Sleep Mode"},
+        { name: "Airplane Mode"}, // Add corresponding images for these games
       ];
 
     return(
@@ -28,7 +28,7 @@ function ScreenSettings(){
                         settingsOptions.map((option, index) => (
                             <div key = {index} className = "leftMenuOptions">
                                 <div>
-                                    <p className = {`subheadingText`}>{option.name}</p>
+                                    <p className = "subheadingText">{option.name}</p>
                                 </div>
                                 {index === 0 && (
                                     <div className="square"></div>
@@ -36,12 +36,6 @@ function ScreenSettings(){
                             </div>
                         ))
                     }
-                    <div className = "selectedOption marginLeftselectedOption">
-                        <div className = "selectedOptionSub">
-                            <div className = "selectedOptionLine marginLeft8 marginRight16"/>
-                            <p className = "subheadingText">Sleep Mode</p>
-                        </div>
-                    </div>
                 </div>
                 <div className="rightMenuSettings">
 

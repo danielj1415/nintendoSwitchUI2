@@ -153,16 +153,4 @@
         width: 4px;
         background-color: #0047FF;
     }
-
-    .marginLeft8{
-        margin-left: 8px;
-    }
-
-    .marginRight16{
-        margin-right: 16px;
-    }
-
-    .marginLeftselectedOption{
-        margin-left: 88px;
-    }
 }

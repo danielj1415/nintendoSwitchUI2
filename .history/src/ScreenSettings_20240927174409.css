@@ -144,25 +144,12 @@
 
     .selectedOptionSub{
         display: flex;
-        align-items: center;
-        height: 72px;
+
     }
 
     .selectedOptionLine{
         height: 56px;
         width: 4px;
         background-color: #0047FF;
-    }
-
-    .marginLeft8{
-        margin-left: 8px;
-    }
-
-    .marginRight16{
-        margin-right: 16px;
-    }
-
-    .marginLeftselectedOption{
-        margin-left: 88px;
     }
 }

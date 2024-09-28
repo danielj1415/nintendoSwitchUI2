@@ -36,9 +36,9 @@ function ScreenSettings(){
                             </div>
                         ))
                     }
-                    <div className = "selectedOption marginLeftselectedOption">
+                    <div className = "selectedOption">
                         <div className = "selectedOptionSub">
-                            <div className = "selectedOptionLine marginLeft8 marginRight16"/>
+                            <div className = "selectedOptionLine marginLeft8 marginRight16 marginLeftselectedOption"/>
                             <p className = "subheadingText">Sleep Mode</p>
                         </div>
                     </div>
