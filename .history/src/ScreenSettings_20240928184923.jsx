@@ -97,7 +97,7 @@ function ScreenSettings(){
                         <div className = "themeRow marginLeft174 marginTop32">
                             <div className = "themeWhiteRectangle marginRight16"></div>
                             <p className = "subheadingText">Basic White</p>
-                            <img className = "iconCheckMark" src = {iconCheckMark}/>
+                            <img src = {iconCheckMark}/>
                         </div>
                         <div className = "themeLine marginTop32"></div>
                         <div className = "themeRow marginLeft174 marginTop32">

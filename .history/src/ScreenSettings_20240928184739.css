@@ -132,7 +132,6 @@
     .themeRow{
         display: flex;
         align-items: center;
-        background-color: red;
     }
 
     .themeWhiteRectangle{
@@ -161,11 +160,6 @@
         margin-top: 64px;
     }
     
-    .iconCheckMark{
-        width: 48px;
-        height: 48px;
-        margin-left: 600px;
-    }
 
     @media (max-height: 800px) and (min-height: 700px) 
     {
