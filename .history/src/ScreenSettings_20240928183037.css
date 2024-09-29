@@ -54,16 +54,22 @@
     }
 
     .divider{
-        height: 2px;
+        height: 3px;
         margin-left:48px;
         margin-right: 48px;
-        background-color: #bababa;
+        background-color: #BDBDBD;
         justify-content: center;
     }
 
     .subheadingText{
         font-family: "Nintendo Switch UI";
         font-size: 30px;
+    }
+
+    .square {
+        width: 72%;    /* Set the width of the square */
+        height: 3px;   /* Set the height of the square */
+        background-color: #C0C0C0; /* You can change the color of the square */
     }
 
     .bottomMenuSettings{
@@ -109,8 +115,8 @@
 
     .square {
         width: 432px;    /* Set the width of the square */
-        height: 2px;   /* Set the height of the square */
-        background-color: #bababa; /* You can change the color of the square */
+        height: 3px;   /* Set the height of the square */
+        background-color: #8B8B8B; /* You can change the color of the square */
         margin-top: 16px;
         margin-bottom: 16px;
         margin-left: 128px;
@@ -126,38 +132,8 @@
         height: 2px;
         width: 1056px;
         margin-left: 144px;
-        background-color: #bababa;
-    }
-
-    .themeRow{
-        display: flex;
-        align-items: center;
-    }
-
-    .themeWhiteRectangle{
-        width: 138px;
-        height: 82px;
-        background-color: white;
-        border: 3px solid #B3B3B3;
-    }
-
-    .themeBlackRectangle{
-        width: 138px;
-        height: 82px;
-        background-color: black;
-        border: 3px solid #3C3C3C;
-    }
-
-    .marginLeft174{
-        margin-left: 174px;
-    }
-
-    .marginTop32{
-        margin-top: 32px;
-    }
-
-    .marginTop64{
         margin-top: 64px;
+        background-color: #8B8B8B;
     }
     
 

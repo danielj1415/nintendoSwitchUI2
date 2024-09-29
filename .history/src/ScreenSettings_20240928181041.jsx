@@ -91,30 +91,18 @@ function ScreenSettings(){
             </div>
                 <div className="rightMenuSettings">
                 {optionsTheme === true && ( // theme page on system settings
-                    <div className = "themePage">
-                        <div className = "themeLine marginTop64"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeWhiteRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic White</p>
-                        </div>
-                        <div className = "themeLine marginTop32"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeBlackRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic Black</p>
-                        </div>
-                        <div className = "themeLine marginTop32"></div>
+                    <div>
+                        Your mom's theme
                     </div>
                 )}
                 {optionsWallpaper === true && ( // wallpaper page on system settings
-                    <div className = "wallpaperPage">
+                    <div>
                         Your mom's wallpaper
                     </div>
                 )}
                 </div>
             </div>
-            <div className = "bottomMenuSettings">
-                <div className = "divider"/>
-            </div>
+            <div className = "bottomMenuSettings"></div>
         </div>
     )
 }

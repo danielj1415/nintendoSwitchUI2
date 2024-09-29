@@ -92,17 +92,11 @@ function ScreenSettings(){
                 <div className="rightMenuSettings">
                 {optionsTheme === true && ( // theme page on system settings
                     <div className = "themePage">
-                        <div className = "themeLine marginTop64"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeWhiteRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic White</p>
+                        <div className = "themeLine"></div>
+                        <div className = "themeRow">
+                            <div className = "themeWhiteRectangle"></div>
+                            <p>Basic White</p>
                         </div>
-                        <div className = "themeLine marginTop32"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeBlackRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic Black</p>
-                        </div>
-                        <div className = "themeLine marginTop32"></div>
                     </div>
                 )}
                 {optionsWallpaper === true && ( // wallpaper page on system settings
@@ -112,9 +106,7 @@ function ScreenSettings(){
                 )}
                 </div>
             </div>
-            <div className = "bottomMenuSettings">
-                <div className = "divider"/>
-            </div>
+            <div className = "bottomMenuSettings"></div>
         </div>
     )
 }

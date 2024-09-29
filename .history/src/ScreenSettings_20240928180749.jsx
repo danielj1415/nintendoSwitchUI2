@@ -16,7 +16,6 @@ function ScreenSettings(){
 
       const [selectedIndex, setSelectedIndex] = useState(0);
       const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
-      const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
 
       useEffect(() => {
         const handleKeyDown = (event) => {
@@ -89,32 +88,12 @@ function ScreenSettings(){
             </div>
             ))}
             </div>
+
                 <div className="rightMenuSettings">
-                {optionsTheme === true && ( // theme page on system settings
-                    <div className = "themePage">
-                        <div className = "themeLine marginTop64"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeWhiteRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic White</p>
-                        </div>
-                        <div className = "themeLine marginTop32"></div>
-                        <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeBlackRectangle marginRight16"></div>
-                            <p className = "subheadingText">Basic Black</p>
-                        </div>
-                        <div className = "themeLine marginTop32"></div>
-                    </div>
-                )}
-                {optionsWallpaper === true && ( // wallpaper page on system settings
-                    <div className = "wallpaperPage">
-                        Your mom's wallpaper
-                    </div>
-                )}
+
                 </div>
             </div>
-            <div className = "bottomMenuSettings">
-                <div className = "divider"/>
-            </div>
+            <div className = "bottomMenuSettings"></div>
         </div>
     )
 }

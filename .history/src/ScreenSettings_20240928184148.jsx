@@ -99,7 +99,7 @@ function ScreenSettings(){
                         </div>
                         <div className = "themeLine marginTop32"></div>
                         <div className = "themeRow marginLeft174 marginTop32">
-                            <div className = "themeBlackRectangle marginRight16"></div>
+                            <div className = "themeWhiteRectangle marginRight16"></div>
                             <p className = "subheadingText">Basic Black</p>
                         </div>
                         <div className = "themeLine marginTop32"></div>
@@ -112,9 +112,7 @@ function ScreenSettings(){
                 )}
                 </div>
             </div>
-            <div className = "bottomMenuSettings">
-                <div className = "divider"/>
-            </div>
+            <div className = "bottomMenuSettings"></div>
         </div>
     )
 }

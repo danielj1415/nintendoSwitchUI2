@@ -113,7 +113,7 @@ function ScreenSettings(){
                 </div>
             </div>
             <div className = "bottomMenuSettings">
-                <div className = "divider"/>
+            <div className = "divider"/>
             </div>
         </div>
     )
