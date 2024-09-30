@@ -18,7 +18,7 @@ function ScreenSettings() {
         { name: "Basic Black", isSelected: false, colorClass: "themeBlackRectangle" },
     ];
 
-    const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
+    const [selectedIndex, setSelectedIndex] = useState(0);
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(0); // Tracks the currently selected theme.
@@ -27,7 +27,7 @@ function ScreenSettings() {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
-                setSelectedOptionIndex((prevIndex) =>
+                setSelectedIndex((prevIndex) =>
                     prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                 );
                 setSelectedThemeIndex((prevIndex) =>
@@ -35,7 +35,7 @@ function ScreenSettings() {
                 );
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
-                setSelectedOptionIndex((prevIndex) =>
+                setSelectedIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                 );
                 setSelectedThemeIndex((prevIndex) =>
@@ -43,12 +43,6 @@ function ScreenSettings() {
                 );
             } else if (event.key === "ArrowRight") {
                 event.preventDefault();
-                setSelectedOptionIndex(null);  
-                setSelectedThemeIndex(0);
-            } else if (event.key === "ArrowLeft") {
-                event.preventDefault();
-                setSelectedOptionIndex(1);  // Index 1 is for "Themes" option in settingsOptions
-                setSelectedThemeIndex(null);
             }
         };
 
@@ -74,9 +68,9 @@ function ScreenSettings() {
                     {settingsOptions.slice(0, 1).map((option, index) => (
                         <div
                             key={index}
-                            className={`leftMenuOptions ${selectedOptionIndex === index ? "selectedOption" : "unselectedOption"}`}
+                            className={`leftMenuOptions ${selectedIndex === index ? "selectedOption" : "unselectedOption"}`}
                         >
-                            {selectedOptionIndex === index && (
+                            {selectedIndex === index && (
                                 <div className="selectedOptionLine marginLeft8 marginRight16" />
                             )}
                             <div>
@@ -89,9 +83,9 @@ function ScreenSettings() {
                     {settingsOptions.slice(1).map((option, index) => (
                         <div
                             key={index + 1}
-                            className={`leftMenuOptions ${selectedOptionIndex === index + 1 ? "selectedOption" : "unselectedOption"}`}
+                            className={`leftMenuOptions ${selectedIndex === index + 1 ? "selectedOption" : "unselectedOption"}`}
                         >
-                            {selectedOptionIndex === index + 1 && (
+                            {selectedIndex === index + 1 && (
                                 <div className="selectedOptionLine marginLeft8 marginRight16" />
                             )}
                             <div>
@@ -101,13 +95,11 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {selectedOptionIndex === 1 && ( // theme page on system settings
+                    {optionsTheme && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
-                            {(selectedThemeIndex === 1 || selectedThemeIndex === null) && (
-                                <div className="themeLine"/>
-                            )}
-                            {themeOptions.slice(0,1).map((theme, index) => (
+                            <div className="themeLine"></div>
+                            {themeOptions.slice(0, 1).map((theme, index) => (
                                 <div
                                     key={index}
                                     className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
@@ -119,27 +111,10 @@ function ScreenSettings() {
                                     {selectedThemeIndex === index && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
-                            {selectedThemeIndex === null && (
-                                <div className="themeLine"/>
-                            )}
-                            {themeOptions.slice(1,2).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index + 1 ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className={`${theme.colorClass} ${selectedThemeIndex === index + 1 ? "selectedThemeMarginRightSpacing selectedThemeMarginLeftSpacing" : "marginRight16 marginLeft32"}`}></div>
-                                    <div className="basicColorContainer">
-                                        <p className="subheadingText">{theme.name}</p>
-                                    </div>
-                                    {selectedThemeIndex === index + 1 && <img className="iconCheckMark" src={iconCheckMark} />}
-                                </div>
-                            ))}
-                            {(selectedThemeIndex === 0 || selectedThemeIndex === null) && (
-                                <div className="themeLine"/>
-                            )}    
+                            <div className="themeLine"></div>
                         </div>
                     )}
-                    {selectedOptionIndex === 2 && (
+                    {optionsWallpaper === true && (
                         <div className="wallpaperPage">
                             Your mom's wallpaper
                         </div>

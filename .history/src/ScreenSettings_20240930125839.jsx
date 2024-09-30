@@ -139,7 +139,7 @@ function ScreenSettings() {
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 2 && (
+                    {optionsWallpaper === true && (
                         <div className="wallpaperPage">
                             Your mom's wallpaper
                         </div>

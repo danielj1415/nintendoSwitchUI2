@@ -43,12 +43,20 @@ function ScreenSettings() {
                 );
             } else if (event.key === "ArrowRight") {
                 event.preventDefault();
-                setSelectedOptionIndex(null);  
-                setSelectedThemeIndex(0);
+                setSelectedThemeIndex((prevIndex) => 
+                    prevIndex = 0
+                );
+                setSelectedOptionIndex((prevIndex) => {
+                    prevIndex = null;
+                })
             } else if (event.key === "ArrowLeft") {
                 event.preventDefault();
-                setSelectedOptionIndex(1);  // Index 1 is for "Themes" option in settingsOptions
-                setSelectedThemeIndex(null);
+                setSelectedThemeIndex((prevIndex) => 
+                    prevIndex = null
+                );
+                setSelectedOptionIndex((prevIndex) => {
+                    prevIndex = 1;
+                })
             }
         };
 
@@ -101,7 +109,7 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {selectedOptionIndex === 1 && ( // theme page on system settings
+                    {optionsTheme && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
                             {(selectedThemeIndex === 1 || selectedThemeIndex === null) && (
@@ -134,12 +142,12 @@ function ScreenSettings() {
                                     {selectedThemeIndex === index + 1 && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
-                            {(selectedThemeIndex === 0 || selectedThemeIndex === null) && (
+                            {selectedThemeIndex === 0 || selectedThemeIndex === null && (
                                 <div className="themeLine"/>
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 2 && (
+                    {optionsWallpaper === true && (
                         <div className="wallpaperPage">
                             Your mom's wallpaper
                         </div>

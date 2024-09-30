@@ -358,9 +358,9 @@
         display: flex;
         align-items: center;
         width: 752px;
-        height: 108px;
+        height: 116px;
         background-color: white;
-        border: 6px solid #43D6DF;
+        border: 4px solid #43D6DF;
     }
 
     .themeRowNotSelected {
