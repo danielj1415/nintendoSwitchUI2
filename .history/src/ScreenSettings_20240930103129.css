@@ -379,14 +379,10 @@
     }
 
     .selectedThemeMarginRightSpacing {
-        margin-right: 16px;
+        margin-right: 10px;
     }
 
     .selectedThemeMarginLeftSpacing {
         margin-left: 26px;
-    }
-
-    .themeSpacer{
-        margin-top: 48px;
     }
 }

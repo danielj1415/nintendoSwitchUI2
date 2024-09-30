@@ -13,14 +13,12 @@ function ScreenSettings(){
         { name: "Notifications"},
         { name: "Sleep Mode"},
         //{ name: "Airplane Mode"}, // Add corresponding images for these games
-    ];
+      ];
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
-    const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
+      const [selectedIndex, setSelectedIndex] = useState(0);
+      const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
+      const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
 
-    const [selectedTheme, setSelectedTheme] = useState(0);
-    const [selectedThemeOption, setSetSelectedThemeOption] = useState(null);
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {

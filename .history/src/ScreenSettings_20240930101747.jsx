@@ -13,14 +13,12 @@ function ScreenSettings(){
         { name: "Notifications"},
         { name: "Sleep Mode"},
         //{ name: "Airplane Mode"}, // Add corresponding images for these games
-    ];
+      ];
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
-    const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
+      const [selectedIndex, setSelectedIndex] = useState(0);
+      const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
+      const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
 
-    const [selectedTheme, setSelectedTheme] = useState(0);
-    const [selectedThemeOption, setSetSelectedThemeOption] = useState(null);
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {
@@ -97,17 +95,22 @@ function ScreenSettings(){
                 <div className="rightMenuSettings">
                 {optionsTheme === true && ( // theme page on system settings
                     <div className = "themePage">
-                        <div className = "themeSpacer"/>
-                        <div className = "themeRowSelected marginLeft144">
-                            <div className = "themeWhiteRectangle selectedThemeMarginRightSpacing selectedThemeMarginLeftSpacing"></div>
-                            <div className = "basicColorContainer"><p className = "subheadingText">Basic Gray</p></div>
+                        <div className = "themeLine marginTop64"></div>
+                        <div className = "themeRowNotSelected marginLeft144">
+                            <div className = "themeWhiteRectangle marginRight16 marginLeft32"></div>
+                            <p className = "subheadingText">Basic White</p>
                             <img className = "iconCheckMark" src = {iconCheckMark}/>
                         </div>
+                        <div className = "themeLine"></div>
                         <div className = "themeRowNotSelected marginLeft144">
                             <div className = "themeBlackRectangle marginRight16 marginLeft32"></div>
-                            <div className = "basicColorContainer"><p className = "subheadingText">Basic Black</p></div>
+                            <p className = "subheadingText">Basic Black</p>
                         </div>
-                        <div className = "themeLine"></div>
+                        <div className = "themeRowNotSelected marginLeft144">
+                            <div className = "themeWhiteRectangle marginRight16 marginLeft32"></div>
+                            <p className = "subheadingText">Basic Gray</p>
+                            <img className = "iconCheckMark" src = {iconCheckMark}/>
+                        </div>
                     </div>
                 )}
                 {optionsWallpaper === true && ( // wallpaper page on system settings

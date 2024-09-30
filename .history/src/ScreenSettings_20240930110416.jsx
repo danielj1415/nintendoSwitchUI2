@@ -20,7 +20,6 @@ function ScreenSettings(){
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
 
     const [selectedTheme, setSelectedTheme] = useState(0);
-    const [selectedThemeOption, setSetSelectedThemeOption] = useState(null);
       useEffect(() => {
         const handleKeyDown = (event) => {
           if (event.key === "ArrowDown") {

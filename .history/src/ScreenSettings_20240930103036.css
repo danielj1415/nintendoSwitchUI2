@@ -378,15 +378,9 @@
         height: 116px;
     }
 
-    .selectedThemeMarginRightSpacing {
-        margin-right: 16px;
-    }
+    .selectedThemeMarginRightSpacing {}
 
     .selectedThemeMarginLeftSpacing {
-        margin-left: 26px;
-    }
-
-    .themeSpacer{
-        margin-top: 48px;
+        margin-left: 28px;
     }
 }
