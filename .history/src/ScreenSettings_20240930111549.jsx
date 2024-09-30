@@ -38,9 +38,6 @@ function ScreenSettings() {
                 setSelectedIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                 );
-                setSelectedThemeIndex((prevIndex) =>
-                    prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
-                );
             } else if (event.key === "ArrowRight") {
                 event.preventDefault();
             }

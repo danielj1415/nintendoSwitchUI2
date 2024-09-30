@@ -21,7 +21,6 @@ function ScreenSettings() {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
-    const [selectedThemeIndex, setSelectedThemeIndex] = useState(0); // Tracks the currently selected theme.
 
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -30,16 +29,10 @@ function ScreenSettings() {
                 setSelectedIndex((prevIndex) =>
                     prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                 );
-                setSelectedThemeIndex((prevIndex) =>
-                    prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
-                );
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
                 setSelectedIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
-                );
-                setSelectedThemeIndex((prevIndex) =>
-                    prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
                 );
             } else if (event.key === "ArrowRight") {
                 event.preventDefault();
@@ -51,7 +44,7 @@ function ScreenSettings() {
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [themeOptions.length, settingsOptions.length]);
+    }, [settingsOptions.length]);
 
     return (
         <div className="settingsScreen">
@@ -95,19 +88,19 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {optionsTheme && ( // theme page on system settings
+                    {optionsTheme === true && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
                             {themeOptions.map((theme, index) => (
                                 <div
                                     key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
+                                    className={`themeRow ${theme.isSelected ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
                                 >
-                                    <div className={`${theme.colorClass} ${selectedThemeIndex === index ? "selectedThemeMarginRightSpacing selectedThemeMarginLeftSpacing" : "marginRight16 marginLeft32"}`}></div>
+                                    <div className={`${theme.colorClass} ${theme.isSelected ? "selectedThemeMarginRightSpacing selectedThemeMarginLeftSpacing" : "marginRight16 marginLeft32"}`}></div>
                                     <div className="basicColorContainer">
                                         <p className="subheadingText">{theme.name}</p>
                                     </div>
-                                    {selectedThemeIndex === index && <img className="iconCheckMark" src={iconCheckMark} />}
+                                    {theme.isSelected && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
                             <div className="themeLine"></div>
