@@ -98,13 +98,14 @@ function ScreenSettings(){
 
                         <div className = "themeRowSelected marginLeft144">
                             <div className = "themeWhiteRectangle marginRight16 marginLeft32"></div>
-                            <p className = "subheadingText">Basic White</p>
+                            <p className = "subheadingText">Basic Test</p>
                             <img className = "iconCheckMark" src = {iconCheckMark}/>
                         </div>
                         <div className = "themeLine"></div>
                         <div className = "themeRowSelected marginLeft144">
-                            <div className = "themeBlackRectangle marginRight16 marginLeft32"></div>
-                            <p className = "subheadingText">Basic Black</p>
+                            <div className = "themeWhiteRectangle marginRight16 marginLeft32"></div>
+                            <p className = "subheadingText">Basic Test</p>
+                            <img className = "iconCheckMark" src = {iconCheckMark}/>
                         </div>
                         <div className = "themeLine"></div>
                     </div>

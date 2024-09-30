@@ -133,7 +133,6 @@
         display: flex;
         align-items: center;
         background-color: red;
-        height: 88px;
     }
 
     .themeWhiteRectangle{
@@ -155,7 +154,7 @@
     }
 
     .marginTop32{
-        margin-top: 16px;
+        margin-top: 24px;
     }
 
     .marginTop64{
@@ -171,16 +170,9 @@
     .themeRowSelected{
         display: flex;
         align-items: center;
+        background-color: red;
         width: 1056px;
-        height: 144px;
-    }
-
-    .marginLeft144{
-        margin-left: 144px; 
-    }
-
-    .marginLeft32{
-        margin-left: 32px;
+        height: 100px;
     }
 
     @media (max-height: 800px) and (min-height: 700px) 

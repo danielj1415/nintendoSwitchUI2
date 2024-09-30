@@ -103,7 +103,7 @@ function ScreenSettings(){
                         </div>
                         <div className = "themeLine"></div>
                         <div className = "themeRowSelected marginLeft144">
-                            <div className = "themeBlackRectangle marginRight16 marginLeft32"></div>
+                            <div className = "themeWhiteRectangle marginRight16 marginLeft32"></div>
                             <p className = "subheadingText">Basic Black</p>
                         </div>
                         <div className = "themeLine"></div>

@@ -133,7 +133,7 @@
         display: flex;
         align-items: center;
         background-color: red;
-        height: 88px;
+        height: 100px;
     }
 
     .themeWhiteRectangle{
@@ -171,16 +171,9 @@
     .themeRowSelected{
         display: flex;
         align-items: center;
+        background-color: red;
         width: 1056px;
-        height: 144px;
-    }
-
-    .marginLeft144{
-        margin-left: 144px; 
-    }
-
-    .marginLeft32{
-        margin-left: 32px;
+        height: 132px;
     }
 
     @media (max-height: 800px) and (min-height: 700px) 

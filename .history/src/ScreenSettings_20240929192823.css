@@ -171,16 +171,13 @@
     .themeRowSelected{
         display: flex;
         align-items: center;
+        background-color: red;
         width: 1056px;
-        height: 144px;
+        height: 132px;
     }
 
     .marginLeft144{
-        margin-left: 144px; 
-    }
-
-    .marginLeft32{
-        margin-left: 32px;
+        margin-left: 144px;
     }
 
     @media (max-height: 800px) and (min-height: 700px) 
