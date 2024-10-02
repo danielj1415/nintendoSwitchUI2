@@ -14,7 +14,7 @@ function ScreenSettings() {
     ];
 
     const themeOptions = [
-        { name: "Basic White", isSelected: false, colorClass: "themeWhiteRectangle" },
+        { name: "Basic White", isSelected: true, colorClass: "themeWhiteRectangle" },
         { name: "Basic Black", isSelected: false, colorClass: "themeBlackRectangle" },
     ];
 
@@ -22,26 +22,22 @@ function ScreenSettings() {
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(0); // Tracks the currently selected theme.
-    
+
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
                 );
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
                 );
@@ -105,11 +101,11 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {( // theme page on system settings
+                    {selectedOptionIndex === 1 && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
                             {(selectedThemeIndex === 1 || selectedThemeIndex === null) && (
-                                <div className="themeLine"></div>
+                                <div className="themeLine">Test</div>
                             )}
                             {themeOptions.slice(0,1).map((theme, index) => (
                                 <div
@@ -143,7 +139,7 @@ function ScreenSettings() {
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 20 && (
+                    {selectedOptionIndex === 2 && (
                         <div className="wallpaperPage">
                             <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>

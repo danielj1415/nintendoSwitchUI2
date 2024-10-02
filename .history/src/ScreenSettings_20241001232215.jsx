@@ -27,21 +27,17 @@ function ScreenSettings() {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
                 );
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
                 );
@@ -62,6 +58,10 @@ function ScreenSettings() {
             window.removeEventListener("keydown", handleKeyDown);
         };
     }, [themeOptions.length, settingsOptions.length]);
+    useEffect(() => {
+        console.log("Selected Option Index:", selectedOptionIndex);
+        console.log("Selected Theme Index:", selectedThemeIndex);
+    }, [selectedOptionIndex, selectedThemeIndex]);
 
     return (
         <div className="settingsScreen">
@@ -105,10 +105,10 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {( // theme page on system settings
+                    {selectedOptionIndex === 1 && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
-                            {(selectedThemeIndex === 1 || selectedThemeIndex === null) && (
+                            {(selectedThemeIndex === 1 || selectedThemeIndex === -1) && (
                                 <div className="themeLine"></div>
                             )}
                             {themeOptions.slice(0,1).map((theme, index) => (
@@ -123,7 +123,7 @@ function ScreenSettings() {
                                     {selectedThemeIndex === index && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
-                            {selectedThemeIndex === null && (
+                            {selectedThemeIndex === -1 && (
                                 <div className="themeLine"/>
                             )}
                             {themeOptions.slice(1,2).map((theme, index) => (
@@ -138,12 +138,12 @@ function ScreenSettings() {
                                     {selectedThemeIndex === index + 1 && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
-                            {(selectedThemeIndex === 0 || selectedThemeIndex === null) && (
+                            {(selectedThemeIndex === 0 || selectedThemeIndex === -1) && (
                                 <div className="themeLine"/>
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 20 && (
+                    {selectedOptionIndex === 2 && (
                         <div className="wallpaperPage">
                             <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>

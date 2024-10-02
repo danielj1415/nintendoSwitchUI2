@@ -27,21 +27,17 @@ function ScreenSettings() {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
                 );
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
-                if(selectedOptionIndex !== null){
-                    setSelectedOptionIndex((prevIndex) =>
+                setSelectedOptionIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                 );
-                }
                 setSelectedThemeIndex((prevIndex) =>
                     prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
                 );

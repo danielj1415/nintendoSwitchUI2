@@ -134,7 +134,7 @@
 
 .themeLine {
     height: 2px;
-    width: 1064px;
+    width: 1056px;
     margin-left: 144px;
     background-color: #bababa;
 }
@@ -180,17 +180,17 @@
 .themeRowSelected {
     display: flex;
     align-items: center;
-    width: 1064px;
-    height: 148px;      /* something note: 148 for selected while 144 for not selected because of the lines*/
+    width: 1056px;
+    height: 28px;
     background-color: white;
-    box-shadow: inset 0 0 0 6px #43D6DF;
+    border: 6px solid #43D6DF;
 }
 
 .themeRowNotSelected {
     display: flex;
     align-items: center;
-    width: 1064px;
-    height: 144px;
+    width: 1056px;
+    height: 128px;
 }
 
 .marginLeft144 {
@@ -198,7 +198,7 @@
 }
 
 .marginLeft32 {
-    margin-left: 32px;
+    margin-left: 38px;
 }
 .themeSpacer{
     margin-top: 64px;

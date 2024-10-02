@@ -181,7 +181,7 @@
     display: flex;
     align-items: center;
     width: 1064px;
-    height: 148px;      /* something note: 148 for selected while 144 for not selected because of the lines*/
+    height: 148px;
     background-color: white;
     box-shadow: inset 0 0 0 6px #43D6DF;
 }
@@ -191,6 +191,7 @@
     align-items: center;
     width: 1064px;
     height: 144px;
+    background-color: red;
 }
 
 .marginLeft144 {
