@@ -155,7 +155,7 @@ function ScreenSettings() {
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 2 && (
+                    {selectedOptionIndex === 20 && (
                         <div className="wallpaperPage">
                             <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>

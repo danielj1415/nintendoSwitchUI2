@@ -117,7 +117,7 @@ function ScreenSettings() {
                     ))}
                 </div>
                 <div className="rightMenuSettings">
-                    {(selectedOptionIndex === 1 || (selectedThemeIndex === 0 || selectedThemeIndex === 1)) && ( // theme page on system settings
+                    {selectedOptionIndex === 1 && ( // theme page on system settings
                         <div className="themePage">
                             <div className="themeSpacer" />
                             {(selectedThemeIndex === 1 || selectedThemeIndex === null) && (
@@ -155,7 +155,7 @@ function ScreenSettings() {
                             )}    
                         </div>
                     )}
-                    {selectedOptionIndex === 2 && (
+                    {selectedOptionIndex === 20 && (
                         <div className="wallpaperPage">
                             <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>
