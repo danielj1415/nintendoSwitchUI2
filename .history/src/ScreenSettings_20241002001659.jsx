@@ -24,56 +24,44 @@ function ScreenSettings() {
     const [optionsMenu, setOptionsMenu] = useState(true);
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
     const [menuOption, setMenuOption] = useState(0); // 0 means user is on leeft menu, 0 means themes menu
-    const [activeMenu, setActiveMenu] = useState("options");
     
     useEffect(() => {
         const handleKeyDown = (event) => {
             if (event.key === "ArrowDown") {
                 event.preventDefault();
-                if (selectedOptionIndex !== null) {
-                    // We're in the left menu (options), update `selectedOptionIndex`
+                if(menuOption === 0){
                     setSelectedOptionIndex((prevIndex) =>
-                        prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : prevIndex
-                    );
-                } else if (selectedThemeIndex !== null) {
-                    // We're in the right menu (themes), update `selectedThemeIndex`
+                    prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
+                )}
+                else if(menuOption === 1){
                     setSelectedThemeIndex((prevIndex) =>
-                        prevIndex < themeOptions.length - 1 ? prevIndex + 1 : prevIndex
-                    );
-                }
+                    prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
+                );}
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
-                if (selectedOptionIndex !== null) {
-                    // We're in the left menu (options), update `selectedOptionIndex` without wrapping around
-                    setSelectedOptionIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
-                    );
-                } else if (selectedThemeIndex !== null) {
-                    // We're in the right menu (themes), update `selectedThemeIndex` without wrapping around
-                    setSelectedThemeIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
-                    );
-                }
-            } else if (event.key === "ArrowRight" && selectedOptionIndex === 1) {
-                // Move to the themes menu
+                setSelectedOptionIndex((prevIndex) =>
+                    prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
+                );
+                setSelectedThemeIndex((prevIndex) =>
+                    prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
+                );
+            } else if (event.key === "ArrowRight") {
                 event.preventDefault();
                 setSelectedOptionIndex(null);  
                 setSelectedThemeIndex(0);
-            } else if (event.key === "ArrowLeft" && selectedThemeIndex !== null) {
-                // Move back to the left menu (Themes option)
+            } else if (event.key === "ArrowLeft") {
                 event.preventDefault();
-                setSelectedOptionIndex(1);  
+                setSelectedOptionIndex(1);  // Index 1 is for "Themes" option in settingsOptions
                 setSelectedThemeIndex(null);
             }
         };
-    
+
         window.addEventListener("keydown", handleKeyDown);
-    
+
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [selectedOptionIndex, selectedThemeIndex, settingsOptions.length, themeOptions.length]);
-    
+    }, [themeOptions.length, settingsOptions.length]);
 
     return (
         <div className="settingsScreen">

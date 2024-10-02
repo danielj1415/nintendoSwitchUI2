@@ -28,52 +28,48 @@ function ScreenSettings() {
     
     useEffect(() => {
         const handleKeyDown = (event) => {
-            if (event.key === "ArrowDown") {
-                event.preventDefault();
-                if (selectedOptionIndex !== null) {
-                    // We're in the left menu (options), update `selectedOptionIndex`
+            if (activeMenu === "options") {
+                if (event.key === "ArrowDown") {
+                    event.preventDefault();
                     setSelectedOptionIndex((prevIndex) =>
-                        prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : prevIndex
+                        prevIndex < settingsOptions.length - 1 ? prevIndex + 1 : 0
                     );
-                } else if (selectedThemeIndex !== null) {
-                    // We're in the right menu (themes), update `selectedThemeIndex`
-                    setSelectedThemeIndex((prevIndex) =>
-                        prevIndex < themeOptions.length - 1 ? prevIndex + 1 : prevIndex
-                    );
-                }
-            } else if (event.key === "ArrowUp") {
-                event.preventDefault();
-                if (selectedOptionIndex !== null) {
-                    // We're in the left menu (options), update `selectedOptionIndex` without wrapping around
+                } else if (event.key === "ArrowUp") {
+                    event.preventDefault();
                     setSelectedOptionIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
+                        prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                     );
-                } else if (selectedThemeIndex !== null) {
-                    // We're in the right menu (themes), update `selectedThemeIndex` without wrapping around
-                    setSelectedThemeIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
-                    );
+                } else if (event.key === "ArrowRight") {
+                    event.preventDefault();
+                    // Switch focus to themes menu
+                    setActiveMenu("themes");
+                    setSelectedThemeIndex(0); // Focus the first theme
                 }
-            } else if (event.key === "ArrowRight" && selectedOptionIndex === 1) {
-                // Move to the themes menu
-                event.preventDefault();
-                setSelectedOptionIndex(null);  
-                setSelectedThemeIndex(0);
-            } else if (event.key === "ArrowLeft" && selectedThemeIndex !== null) {
-                // Move back to the left menu (Themes option)
-                event.preventDefault();
-                setSelectedOptionIndex(1);  
-                setSelectedThemeIndex(null);
+            } else if (activeMenu === "themes") {
+                if (event.key === "ArrowDown") {
+                    event.preventDefault();
+                    setSelectedThemeIndex((prevIndex) =>
+                        prevIndex < themeOptions.length - 1 ? prevIndex + 1 : 0
+                    );
+                } else if (event.key === "ArrowUp") {
+                    event.preventDefault();
+                    setSelectedThemeIndex((prevIndex) =>
+                        prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
+                    );
+                } else if (event.key === "ArrowLeft") {
+                    event.preventDefault();
+                    // Switch focus back to options menu
+                    setActiveMenu("options");
+                }
             }
         };
-    
+
         window.addEventListener("keydown", handleKeyDown);
-    
+
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [selectedOptionIndex, selectedThemeIndex, settingsOptions.length, themeOptions.length]);
-    
+    }, [activeMenu, settingsOptions.length, themeOptions.length]);
 
     return (
         <div className="settingsScreen">

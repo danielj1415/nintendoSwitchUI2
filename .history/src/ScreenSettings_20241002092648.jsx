@@ -44,14 +44,14 @@ function ScreenSettings() {
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
                 if (selectedOptionIndex !== null) {
-                    // We're in the left menu (options), update `selectedOptionIndex` without wrapping around
+                    // We're in the left menu (options), update `selectedOptionIndex`
                     setSelectedOptionIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
+                        prevIndex > 0 ? prevIndex - 1 : settingsOptions.length - 1
                     );
                 } else if (selectedThemeIndex !== null) {
-                    // We're in the right menu (themes), update `selectedThemeIndex` without wrapping around
+                    // We're in the right menu (themes), update `selectedThemeIndex`
                     setSelectedThemeIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
+                        prevIndex > 0 ? prevIndex - 1 : themeOptions.length - 1
                     );
                 }
             } else if (event.key === "ArrowRight" && selectedOptionIndex === 1) {
