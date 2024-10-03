@@ -406,11 +406,4 @@
     .themeSpacer{
         margin-top: 48px;
     }
-    /*10.2.2024*/
-    .basicWallpaperContainer{
-        width: 400px;
-        display: flex;
-        align-items: center;
-        height: 116px;
-    }
 }

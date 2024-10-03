@@ -11,6 +11,7 @@ function ScreenSettings() {
         { name: "Wallpapers", selected: false },
         { name: "Notifications", selected: false },
         { name: "Sleep Mode", selected: false },
+        { name: "Sample", selected: true}
     ];
 
     const themeOptions = [
@@ -24,12 +25,11 @@ function ScreenSettings() {
     ]
 
     const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
-    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
-    const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
-        
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
     const [optionsMenu, setOptionsMenu] = useState(true);
+    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
+    const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
     
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -166,36 +166,7 @@ function ScreenSettings() {
                     )}
                     {selectedOptionIndex === 2 && (
                         <div className="wallpaperPage">
-                            <div className="themeSpacer" />
-                            {(selectedWallpaperIndex === 1 || selectedWallpaperIndex === null) && (
-                                <div className="themeLine"></div>
-                            )}
-                            {settingsWallpaperOptions.slice(0,1).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            {selectedWallpaperIndex === null && (
-                                <div className="themeLine"/>
-                            )}
-                            {settingsWallpaperOptions.slice(1, 2).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            {(selectedWallpaperIndex === 0 || selectedWallpaperIndex === null) && (
-                                <div className="themeLine"/>
-                            )} 
+                            <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>
                     )}
                 </div>

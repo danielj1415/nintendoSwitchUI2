@@ -6,11 +6,11 @@ import iconCheckMark from "./assets/icons/iconCheckMark.svg";
 function ScreenSettings() {
 
     const settingsOptions = [
-        { name: "Support/Health & Safety", selected: false },
-        { name: "Themes", selected: false },
-        { name: "Wallpapers", selected: false },
-        { name: "Notifications", selected: false },
-        { name: "Sleep Mode", selected: false },
+        { name: "Support/Health & Safety" },
+        { name: "Themes" },
+        { name: "Wallpapers" },
+        { name: "Notifications" },
+        { name: "Sleep Mode" },
     ];
 
     const themeOptions = [
@@ -18,18 +18,13 @@ function ScreenSettings() {
         { name: "Basic Black", isSelected: false, colorClass: "themeBlackRectangle" },
     ];
 
-    const settingsWallpaperOptions = [
-        { name: "Choose a new wallpaper"},
-        { name: "Remove current wallapper"}
-    ]
-
     const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
-    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
-    const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
-        
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
     const [optionsMenu, setOptionsMenu] = useState(true);
+    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
+    const [menuOption, setMenuOption] = useState(0); // 0 means user is on leeft menu, 0 means themes menu
+    const [activeMenu, setActiveMenu] = useState("options");
     
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -97,7 +92,7 @@ function ScreenSettings() {
                             key={index}
                             className={`leftMenuOptions ${selectedOptionIndex === index ? "selectedOption" : "unselectedOption"}`}
                         >
-                            {selectedOptionIndex === index && (
+                            {selectedOptionIndex === null && (
                                 <div className="selectedOptionLine marginLeft8 marginRight16" />
                             )}
                             <div>
@@ -106,7 +101,7 @@ function ScreenSettings() {
                         </div>
                     ))}
                     <div className="square" />
-                    {settingsOptions.slice(1, 5).map((option, index) => (
+                    {settingsOptions.slice(1).map((option, index) => (
                         <div
                             key={index + 1}
                             className={`leftMenuOptions ${selectedOptionIndex === index + 1 ? "selectedOption" : "unselectedOption"}`}
@@ -119,11 +114,6 @@ function ScreenSettings() {
                             </div>
                         </div>
                     ))}
-                    {/*settingsOptions.slice(5).map((option, index) => (
-                        <div>
-                            {option.name}
-                        </div>
-                    ))*/}
                 </div>
                 <div className="rightMenuSettings">
                     {(selectedOptionIndex === 1 || (selectedThemeIndex === 0 || selectedThemeIndex === 1)) && ( // theme page on system settings
@@ -141,7 +131,7 @@ function ScreenSettings() {
                                     <div className="basicColorContainer">
                                         <p className="subheadingText">{theme.name}</p>
                                     </div>
-                                    {theme.isSelected && <img className="iconCheckMark" src={iconCheckMark} />}
+                                    {selectedThemeIndex === index && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
                             {selectedThemeIndex === null && (
@@ -156,7 +146,7 @@ function ScreenSettings() {
                                     <div className="basicColorContainer">
                                         <p className="subheadingText">{theme.name}</p>
                                     </div>
-                                    {theme.isSelected && <img className="iconCheckMark" src={iconCheckMark} />}
+                                    {selectedThemeIndex === index + 1 && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
                             {(selectedThemeIndex === 0 || selectedThemeIndex === null) && (
@@ -166,36 +156,7 @@ function ScreenSettings() {
                     )}
                     {selectedOptionIndex === 2 && (
                         <div className="wallpaperPage">
-                            <div className="themeSpacer" />
-                            {(selectedWallpaperIndex === 1 || selectedWallpaperIndex === null) && (
-                                <div className="themeLine"></div>
-                            )}
-                            {settingsWallpaperOptions.slice(0,1).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            {selectedWallpaperIndex === null && (
-                                <div className="themeLine"/>
-                            )}
-                            {settingsWallpaperOptions.slice(1, 2).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            {(selectedWallpaperIndex === 0 || selectedWallpaperIndex === null) && (
-                                <div className="themeLine"/>
-                            )} 
+                            <p className="subheadingText">Your Mom's Wallpaper</p>
                         </div>
                     )}
                 </div>

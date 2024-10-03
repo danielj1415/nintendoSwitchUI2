@@ -293,6 +293,7 @@
         /* Use flexbox to align the blue line and text horizontally */
         align-items: center;
         /* Vertically center the items inside */
+        background-color: red;
     }
 
     .selectedOptionSub {
@@ -407,10 +408,7 @@
         margin-top: 48px;
     }
     /*10.2.2024*/
-    .basicWallpaperContainer{
-        width: 400px;
-        display: flex;
-        align-items: center;
-        height: 116px;
+    .selectedOptionLineMarginLeftSpacing{
+        margin-left: 0px;
     }
 }

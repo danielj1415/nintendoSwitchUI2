@@ -24,12 +24,11 @@ function ScreenSettings() {
     ]
 
     const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
-    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
-    const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
-        
     const [optionsTheme, setOptionsTheme] = useState(true); // true means the user is on the Themes page for the system settings
     const [optionsWallpaper, setOptionsWallpaper] = useState(false); // true means the user is on the Wallpaper page for the system settings
     const [optionsMenu, setOptionsMenu] = useState(true);
+    const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
+    const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
     
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -175,27 +174,12 @@ function ScreenSettings() {
                                     key={index}
                                     className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
                                 >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
+                                    <div className="basicWallpaperContainer">
+                                        <p className="subheadingText">{theme.name}</p>
                                     </div>
+                                    {theme.isSelected && <img className="iconCheckMark" src={iconCheckMark} />}
                                 </div>
                             ))}
-                            {selectedWallpaperIndex === null && (
-                                <div className="themeLine"/>
-                            )}
-                            {settingsWallpaperOptions.slice(1, 2).map((theme, index) => (
-                                <div
-                                    key={index}
-                                    className={`themeRow ${selectedThemeIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
-                                >
-                                    <div className="basicWallpaperContainer ">
-                                        <p className="subheadingText marginLeft32">{theme.name}</p>
-                                    </div>
-                                </div>
-                            ))}
-                            {(selectedWallpaperIndex === 0 || selectedWallpaperIndex === null) && (
-                                <div className="themeLine"/>
-                            )} 
                         </div>
                     )}
                 </div>
