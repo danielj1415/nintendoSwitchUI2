@@ -23,7 +23,7 @@ function ScreenSettings() {
         { name: "Remove current wallapper"}
     ]
 
-    const [selectedOptionIndex, setSelectedOptionIndex] = useState(1);
+    const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
     const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
         
@@ -80,17 +80,11 @@ function ScreenSettings() {
                     setSelectedOptionIndex(null);
                     setSelectedWallpaperIndex(0);
                 }
-            } else if (event.key === "ArrowLeft") {
+            } else if (event.key === "ArrowLeft" && selectedThemeIndex !== null) {
                 // Move back to the left menu (Themes option)
                 event.preventDefault();
-                if(selectedThemeIndex === 1 || selectedThemeIndex === 0){
-                    setSelectedOptionIndex(1);  
-                    setSelectedThemeIndex(null);
-                }
-                if(selectedWallpaperIndex === 1 || selectedWallpaperIndex === 0){
-                    setSelectedOptionIndex(2);
-                    setSelectedWallpaperIndex(null);
-                }
+                setSelectedOptionIndex(1);  
+                setSelectedThemeIndex(null);
             }
         };
     

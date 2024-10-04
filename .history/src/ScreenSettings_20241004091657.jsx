@@ -23,7 +23,7 @@ function ScreenSettings() {
         { name: "Remove current wallapper"}
     ]
 
-    const [selectedOptionIndex, setSelectedOptionIndex] = useState(1);
+    const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
     const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
         

@@ -23,7 +23,7 @@ function ScreenSettings() {
         { name: "Remove current wallapper"}
     ]
 
-    const [selectedOptionIndex, setSelectedOptionIndex] = useState(1);
+    const [selectedOptionIndex, setSelectedOptionIndex] = useState(0);
     const [selectedThemeIndex, setSelectedThemeIndex] = useState(null); // Tracks the currently selected theme.
     const [selectedWallpaperIndex, setSelectedWallpaperIndex] = useState(null);
         
@@ -45,11 +45,6 @@ function ScreenSettings() {
                     setSelectedThemeIndex((prevIndex) =>
                         prevIndex < themeOptions.length - 1 ? prevIndex + 1 : prevIndex
                     );
-                } else if (selectedWallpaperIndex !== null){
-                    // We're in the right menu (wallpaper), update `selectedWallpaperIndex`
-                    setSelectedWallpaperIndex((prevIndex) =>
-                        prevIndex < settingsWallpaperOptions.length - 1 ? prevIndex + 1 : prevIndex
-                    );
                 }
             } else if (event.key === "ArrowUp") {
                 event.preventDefault();
@@ -63,11 +58,6 @@ function ScreenSettings() {
                     setSelectedThemeIndex((prevIndex) =>
                         prevIndex > 0 ? prevIndex - 1 : prevIndex  // Stay at index 0 if already there
                     );
-                }else if (selectedWallpaperIndex !== null){
-                    // We're in the right menu (wallpaper), update `selectedWallpaperIndex`
-                    setSelectedWallpaperIndex((prevIndex) =>
-                        prevIndex > 0 ? prevIndex - 1 : prevIndex
-                    );
                 }
             } else if (event.key === "ArrowRight") {
                 event.preventDefault();
@@ -80,17 +70,11 @@ function ScreenSettings() {
                     setSelectedOptionIndex(null);
                     setSelectedWallpaperIndex(0);
                 }
-            } else if (event.key === "ArrowLeft") {
+            } else if (event.key === "ArrowLeft" && selectedThemeIndex !== null) {
                 // Move back to the left menu (Themes option)
                 event.preventDefault();
-                if(selectedThemeIndex === 1 || selectedThemeIndex === 0){
-                    setSelectedOptionIndex(1);  
-                    setSelectedThemeIndex(null);
-                }
-                if(selectedWallpaperIndex === 1 || selectedWallpaperIndex === 0){
-                    setSelectedOptionIndex(2);
-                    setSelectedWallpaperIndex(null);
-                }
+                setSelectedOptionIndex(1);  
+                setSelectedThemeIndex(null);
             }
         };
     
@@ -208,7 +192,7 @@ function ScreenSettings() {
                             {settingsWallpaperOptions.slice(1, 2).map((theme, index) => (
                                 <div
                                     key={index}
-                                    className={`themeRow ${selectedWallpaperIndex === index + 1 ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
+                                    className={`themeRow ${selectedWallpaperIndex === index ? "themeRowSelected" : "themeRowNotSelected"} marginLeft144`}
                                 >
                                     <div className="basicWallpaperContainer ">
                                         <p className="subheadingText marginLeft32">{theme.name}</p>
