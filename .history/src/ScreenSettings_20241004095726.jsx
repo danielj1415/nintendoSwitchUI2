@@ -228,7 +228,7 @@ function ScreenSettings() {
             </div>
             <div className="bottomMenuSettings">
                 <div className="divider" />
-                <div className = "bottomMenuRowSettings">
+                <div className = "bottomMenuRow">
                     <img src={iconSwitchDark} className="iconSwitchDark" />
                 </div>
             </div>

@@ -182,7 +182,7 @@
   .iconSwitchLight{
     width: 96px;
     height: 44px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 0px rgba(0, 0, 0, 0.5);
     border-radius: 8px;
   }
 
@@ -364,20 +364,15 @@
     }
   
     .iconSwitchLight{
-      margin-top: 12px;
-      width: 96px;
-      height: 44px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
+      width: 84px;
+      height: 52px;
+      margin-top: 16px;
     }
     .bottomMenuRow{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 12px;
-    }
-    .bottomMenuRowIcons{
-      margin-top: 8 px;
+      margin-top: 4px;
     }
     .iconA{
       width: 28px;

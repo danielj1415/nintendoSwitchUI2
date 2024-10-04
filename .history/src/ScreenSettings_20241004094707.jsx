@@ -2,7 +2,7 @@ import "./ScreenSettings.css";
 import iconBrightnessLight from "./assets/icons/iconBrightnessLight.svg";
 import { useState, useEffect } from "react";
 import iconCheckMark from "./assets/icons/iconCheckMark.svg";
-import iconSwitchDark from "./assets/icons/iconSwitchDark.svg";
+import iconSwitchLight from "./assets/icons/iconSwitchLight.svg";
 
 function ScreenSettings() {
 
@@ -228,8 +228,8 @@ function ScreenSettings() {
             </div>
             <div className="bottomMenuSettings">
                 <div className="divider" />
-                <div className = "bottomMenuRowSettings">
-                    <img src={iconSwitchDark} className="iconSwitchDark" />
+                <div className = "bottomMenuRow">
+                    <img src={iconSwitchLight} className="iconSwitchLight" />
                 </div>
             </div>
         </div>

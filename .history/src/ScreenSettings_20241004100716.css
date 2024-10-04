@@ -255,7 +255,7 @@
 
     .bottomMenuSettings {
         width: 100%;
-        height: 96px;
+        height: 86px;
         background-color: #F0F0F0;
     }
 
@@ -267,7 +267,7 @@
 
     .rightMenuSettings {
         width: 65%;
-        height: 564px;
+        height: 574px;
         background-color: #F0F0F0;
     }
 
@@ -421,7 +421,6 @@
     .bottomMenuRowSettings{
         margin-left: 80px;
         margin-right: 80px;
-        margin-top: 26px;   
     }
 
 }

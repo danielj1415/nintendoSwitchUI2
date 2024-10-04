@@ -364,7 +364,9 @@
     }
   
     .iconSwitchLight{
-      margin-top: 12px;
+      width: 84px;
+      height: 52px;
+      margin-top: 16px;
       width: 96px;
       height: 44px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -374,10 +376,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 12px;
-    }
-    .bottomMenuRowIcons{
-      margin-top: 8 px;
+      margin-top: 4px;
     }
     .iconA{
       width: 28px;
