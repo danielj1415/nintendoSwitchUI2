@@ -55,8 +55,8 @@ useEffect(() => {
       if (selectedIcon === 5) {
         // Navigate to the settings screen
         navigate("/settings");
-      } else if (selectedIcon === 3){
-        navigate("/album");
+      } else if (selectedIcon === 4){
+        navigate("album");
       }
     } else if (selectedIcon === null) {
       // Navigating the games

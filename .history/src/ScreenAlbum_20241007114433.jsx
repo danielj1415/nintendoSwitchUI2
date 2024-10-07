@@ -14,33 +14,13 @@ function ScreenAlbum(){
 
     const navigate = useNavigate();
 
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === "ArrowDown") {
-                event.preventDefault();
-            
-            } else if (event.key === "ArrowUp") {
-                event.preventDefault();
-                
-            } else if (event.key === "ArrowRight") {
-                event.preventDefault();
-                
-            } else if (event.key === "ArrowLeft") {
-                event.preventDefault();
-                
-            } else if (event.key === "A" || event.key === "a"){
-
-            } else if (event.key === "B" || event.key === "b"){
+    useEffect(()=>{
+        const handleKeyDown(event) => {
+            if(event.key === "B" || event.key === 'b'){
                 navigate("/settings");
             }
-        };
-    
-        window.addEventListener("keydown", handleKeyDown);
-    
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-        };
-    },);
+        }
+    })
     
     return (
         <div className="albumScreen">

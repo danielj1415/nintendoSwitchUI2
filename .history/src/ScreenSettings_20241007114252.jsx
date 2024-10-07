@@ -120,6 +120,9 @@ function ScreenSettings() {
                 <div className="topMenuRow">
                     <img src={iconBrightnessLight} className="iconBrightnessLight marginRight28 marginLeft108" />
                     <p className="headingText">System Settings</p>
+                    <p>Selected Option Index: {selectedOptionIndex}</p>
+                    <p>Selected Theme Index: {selectedThemeIndex}</p>
+                    <p>Selected Wallpaper Index: {selectedWallpaperIndex}</p>
                 </div>
                 <div className="divider" />
             </div>

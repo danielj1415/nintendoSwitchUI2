@@ -1,46 +1,17 @@
 
 import "./ScreenAlbum.css";
 
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import iconAlbumDark from "./assets/icons/iconAlbumDark.svg";
 import iconSwitchDark from "./assets/icons/iconSwitchDark.svg";
 import iconADark from "./assets/icons/iconADark.svg";
 import iconBDark from "./assets/icons/iconBDark.svg";
 import iconXDark from "./assets/icons/iconXDark.svg";
 import iconYDark from "./assets/icons/iconYDark.svg";
-import { useEffect } from "react";
 
 function ScreenAlbum(){
 
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const handleKeyDown = (event) => {
-            if (event.key === "ArrowDown") {
-                event.preventDefault();
-            
-            } else if (event.key === "ArrowUp") {
-                event.preventDefault();
-                
-            } else if (event.key === "ArrowRight") {
-                event.preventDefault();
-                
-            } else if (event.key === "ArrowLeft") {
-                event.preventDefault();
-                
-            } else if (event.key === "A" || event.key === "a"){
-
-            } else if (event.key === "B" || event.key === "b"){
-                navigate("/settings");
-            }
-        };
     
-        window.addEventListener("keydown", handleKeyDown);
-    
-        return () => {
-            window.removeEventListener("keydown", handleKeyDown);
-        };
-    },);
     
     return (
         <div className="albumScreen">

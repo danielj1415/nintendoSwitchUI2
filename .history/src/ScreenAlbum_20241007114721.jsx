@@ -31,7 +31,7 @@ function ScreenAlbum(){
             } else if (event.key === "A" || event.key === "a"){
 
             } else if (event.key === "B" || event.key === "b"){
-                navigate("/settings");
+                navigate("/");
             }
         };
     
@@ -40,7 +40,7 @@ function ScreenAlbum(){
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    },);
+    }, [selectedOptionIndex, selectedThemeIndex, settingsOptions.length, themeOptions.length]);
     
     return (
         <div className="albumScreen">
