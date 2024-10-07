@@ -1,0 +1,16 @@
+
+@import "./fonts.css";
+
+@media (max-height: 800px) and (min-height: 700px) {
+    .albumTopMenuRow {
+        background-color: #F0F0F0;
+    }
+
+    .albumMiddleMenuSettings{
+        background-color: blue;
+    }
+
+    .albumBottomMenuSettings{
+        background-color: green;
+    }
+}

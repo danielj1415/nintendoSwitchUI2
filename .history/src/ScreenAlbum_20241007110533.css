@@ -1,0 +1,10 @@
+
+@import "./fonts.css";
+
+@media (max-height: 800px) and (min-height: 700px) {
+    .topMenuRow {
+        display: flex;
+        align-items: center;
+        background-color: #F0F0F0;
+    }
+}
