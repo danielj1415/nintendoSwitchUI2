@@ -240,7 +240,7 @@
 
 .iconSwitchDark{
     width: 96px;
-    height: 44px;
+    height: 42px;
     border-radius: 10px;
 }
 .iconASettings{
@@ -251,8 +251,6 @@
 }
 .iconBSettings{
     margin-right: 20px;
-    width: 36px;
-    height: 36px;
 }
 
 @media (max-height: 800px) and (min-height: 700px) {

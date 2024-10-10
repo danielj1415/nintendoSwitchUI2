@@ -222,7 +222,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 24px;
+    margin-top: 20px;
     height: 60px;
 }
 
@@ -235,24 +235,13 @@
 .bottomMenuSettingsRowText{
     font-family: "Nintendo Switch UI";
     color: black;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .iconSwitchDark{
     width: 96px;
-    height: 44px;
+    height: 42px;
     border-radius: 10px;
-}
-.iconASettings{
-    margin-left: 84px;
-    margin-right: 20px;
-    width: 36px;
-    height: 36px;
-}
-.iconBSettings{
-    margin-right: 20px;
-    width: 36px;
-    height: 36px;
 }
 
 @media (max-height: 800px) and (min-height: 700px) {
