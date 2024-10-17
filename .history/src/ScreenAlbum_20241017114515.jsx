@@ -34,10 +34,10 @@ import WallpaperTwenty from "./assets/images/wallpaperTwenty.png";
 function ScreenAlbum(){
 
     const images = [
-        [WallpaperThree, WallpaperFour, WallpaperOne, WallpaperTwo, WallpaperFive],
-        [WallpaperSix, WallpaperSeven, WallpaperEight, WallpaperNine, WallpaperTen],
-        [WallpaperEleven, WallpaperTwelve, WallpaperThirteen, WallpaperFourteen, WallpaperFifteen],
-        [WallpaperSixteen, WallpaperSeventeen, WallpaperEighteen, WallpaperNineteen, WallpaperTwenty],
+        [{WallpaperOne}, {WallpaperTwo}, {WallpaperThree}, {WallpaperFour}, {WallpaperFive}],
+        [{WallpaperSix}, {WallpaperSeven}, {WallpaperEight}, {WallpaperNine}, {WallpaperTen}],
+        [{WallpaperEleven}, {WallpaperTwelve}, {WallpaperThirteen}, {WallpaperFourteen}, {WallpaperFifteen}],
+        [{WallpaperSixteen}, {WallpaperSeventeen}, {WallpaperEighteen}, {WallpaperNineteen}, {WallpaperTwenty}],
     ]
 
     const [selectedImageIndex, setSelectedImageIndex] = useState([0, 0]);

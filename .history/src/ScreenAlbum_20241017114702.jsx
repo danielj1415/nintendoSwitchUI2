@@ -34,7 +34,7 @@ import WallpaperTwenty from "./assets/images/wallpaperTwenty.png";
 function ScreenAlbum(){
 
     const images = [
-        [WallpaperThree, WallpaperFour, WallpaperOne, WallpaperTwo, WallpaperFive],
+        [WallpaperThree, WallpaperTwo, WallpaperOne, WallpaperFour, WallpaperFive],
         [WallpaperSix, WallpaperSeven, WallpaperEight, WallpaperNine, WallpaperTen],
         [WallpaperEleven, WallpaperTwelve, WallpaperThirteen, WallpaperFourteen, WallpaperFifteen],
         [WallpaperSixteen, WallpaperSeventeen, WallpaperEighteen, WallpaperNineteen, WallpaperTwenty],

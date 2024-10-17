@@ -34,10 +34,12 @@ import WallpaperTwenty from "./assets/images/wallpaperTwenty.png";
 function ScreenAlbum(){
 
     const images = [
-        [WallpaperThree, WallpaperFour, WallpaperOne, WallpaperTwo, WallpaperFive],
-        [WallpaperSix, WallpaperSeven, WallpaperEight, WallpaperNine, WallpaperTen],
-        [WallpaperEleven, WallpaperTwelve, WallpaperThirteen, WallpaperFourteen, WallpaperFifteen],
-        [WallpaperSixteen, WallpaperSeventeen, WallpaperEighteen, WallpaperNineteen, WallpaperTwenty],
+        [{WallpaperOne}, {WallpaperTwo}, {WallpaperThree}, {WallpaperFour}, {WallpaperFive}],
+        ["imageSix", "imageSeven", "imageEight", "imageNine", "imageTen"],
+        ["imageEleven", "imageTwelve", "imageThirteen", "imageFourteen", "imageFifteen"],
+        ["imageSixteen", "imageSeventeen", "imageEighteen", "imageNineteen", "imageTwenty"],
+        ["imageTwentyOne", "imageTwentyTwo", "imageTwentyThree", "imageTwentyFour", "imageTwentyFive"],
+        ["imageTwentyFour", "imageTwentySeven", "imageTwentyEight", "imageTwentyNine", "imageThirty"]
     ]
 
     const [selectedImageIndex, setSelectedImageIndex] = useState([0, 0]);
@@ -99,13 +101,12 @@ function ScreenAlbum(){
                 {images.map((row, rowIndex) => (
                     <div className="imageRow" key={rowIndex}>
                     {row.map((cell, cellIndex) => (
-                        <img
+                        <div
                             key={cellIndex}
                             className={`image ${selectedImageIndex[0] === rowIndex && selectedImageIndex[1] === cellIndex ? 'selected' : ''}`}
                             onClick={() => setSelectedImageIndex([rowIndex, cellIndex])} // Set the selected image on click
-                            src = {cell}
                         >
-                        </img>
+                        </div>
                     ))}
                     </div>
                 ))}
