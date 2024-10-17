@@ -21,41 +21,29 @@ function ScreenAlbum(){
         ["imageTwentyFour", "imageTwentySeven", "imageTwentyEight", "imageTwentyNine", "imageThirty"]
     ]
 
-    const [selectedImageIndex, setSelectedImageIndex] = useState([0, 0]);
+    const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
     const navigate = useNavigate();
 
     useEffect(() => {
         const handleKeyDown = (event) => {
-            setSelectedImageIndex((prevIndex) => {
-                const [currentRow, currentCell] = prevIndex;
-                const totalRows = images.length;
-                const totalCols = images[0].length;
-    
-                if (event.key === "ArrowDown") {
-                    event.preventDefault();
-                    const nextRow = currentRow < totalRows - 1 ? currentRow + 1 : currentRow;
-                    return [nextRow, currentCell]; // Move down to the next row
-                } else if (event.key === "ArrowUp") {
-                    event.preventDefault();
-                    const prevRow = currentRow > 0 ? currentRow - 1 : currentRow;
-                    return [prevRow, currentCell]; // Move up to the previous row
-                } else if (event.key === "ArrowRight") {
-                    event.preventDefault();
-                    const nextCell = currentCell < totalCols - 1 ? currentCell + 1 : currentCell;
-                    return [currentRow, nextCell]; // Move right to the next cell
-                } else if (event.key === "ArrowLeft") {
-                    event.preventDefault();
-                    const prevCell = currentCell > 0 ? currentCell - 1 : currentCell;
-                    return [currentRow, prevCell]; // Move left to the previous cell
-                } else if (event.key === "A" || event.key === "a") {
-                    // Logic for "A" key action
-                } else if (event.key === "B" || event.key === "b") {
-                    navigate("/settings");
-                }
-    
-                return prevIndex; // No change if no arrow key is pressed
-            });
+            if (event.key === "ArrowDown") {
+                event.preventDefault();
+            
+            } else if (event.key === "ArrowUp") {
+                event.preventDefault();
+                
+            } else if (event.key === "ArrowRight") {
+                event.preventDefault();
+                
+            } else if (event.key === "ArrowLeft") {
+                event.preventDefault();
+                
+            } else if (event.key === "A" || event.key === "a"){
+
+            } else if (event.key === "B" || event.key === "b"){
+                navigate("/settings");
+            }
         };
     
         window.addEventListener("keydown", handleKeyDown);
@@ -63,8 +51,7 @@ function ScreenAlbum(){
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
         };
-    }, [navigate, images]);
-    
+    },);
     
     return (
         <div className="albumScreen">
@@ -80,12 +67,8 @@ function ScreenAlbum(){
                 {images.map((row, rowIndex) => (
                     <div className="imageRow" key={rowIndex}>
                     {row.map((cell, cellIndex) => (
-                        <div
-                            key={cellIndex}
-                            className={`image ${selectedImageIndex[0] === rowIndex && selectedImageIndex[1] === cellIndex ? 'selected' : ''}`}
-                            onClick={() => setSelectedImageIndex([rowIndex, cellIndex])} // Set the selected image on click
-                        >
-                            {cell}
+                        <div className="image" key={cellIndex}>
+                        {cell}
                         </div>
                     ))}
                     </div>

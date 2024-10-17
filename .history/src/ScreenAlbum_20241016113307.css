@@ -8,14 +8,14 @@
 .albumTopMenuRow{
     display: flex;
     align-items: center;
-    height: 140px;
+    height: 142px;
     background-color: #F0F0F0;
     margin-bottom: 2px;
 }
 
 .albumMiddleMenuSettings{
     background-color: #F0F0F0;
-    height: 664px;
+    height: 660px;
     overflow-y:hidden;
 }
 
@@ -32,7 +32,7 @@
     margin-left: 80px;
     margin-right: 80px;
     justify-content: space-between;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 .albumBottomMenuTextIcons{
     display: flex;
@@ -54,8 +54,8 @@
     margin-top: 32px;
 }
 .imageContainer{
-    margin-left: 132px;
-    margin-top: 28px;
+    margin-left: 120px;
+    margin-top: 36px;
 }
 .imageRow{
     display: flex;
@@ -69,11 +69,10 @@
     margin-bottom: 16px;
 }
 .image.selected{
-    border: 8px solid #43D6DF;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: -8px;
-    margin-bottom: 8px;
+    border: 4px solid blue;
+    margin-left: 4px;
+    margin-top: -4px;
+    margin-right: -4px;
 }
 
 @media (max-height: 800px) and (min-height: 700px) {
