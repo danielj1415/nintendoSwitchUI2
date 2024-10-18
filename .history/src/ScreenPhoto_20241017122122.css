@@ -1,0 +1,11 @@
+@import "./fonts.css";
+
+.bottomMenuPhoto{
+    height: 112px;
+    width: 100%;
+    background-color: black;
+}
+
+@media (max-height: 800px) and (min-height: 700px) {
+
+}

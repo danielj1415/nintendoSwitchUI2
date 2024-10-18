@@ -1,0 +1,16 @@
+@import "./fonts.css";
+
+.backgroundImage{
+    width: 100%;
+    height: calc(100vh - 2px); /* Subtract the height of the bottom menu */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+.bottomMenuPhoto{
+    height: 110px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+@media (max-height: 800px) and (min-height: 700px) {
+
+}
