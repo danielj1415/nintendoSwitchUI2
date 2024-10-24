@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-  }
+    background-color: red;
   
   /* Set the image to cover the entire container */
   .wallpaper {
@@ -231,7 +231,7 @@
     margin-left: 84px;
   }
 
-  @media ((max-height: 800px) and (min-height: 700px)) 
+  @media (max-height: 800px) and (min-height: 700px) 
   {
     .game {
         flex-shrink: 0;

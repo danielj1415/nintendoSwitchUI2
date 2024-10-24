@@ -75,7 +75,7 @@
     margin-bottom: 8px;
 }
 
-@media ((max-height: 800px) and (min-height: 700px)){
+@media (max-height: 800px){
     .albumTopMenuSettings {
         background-color: #F0F0F0;
         width: 100%;

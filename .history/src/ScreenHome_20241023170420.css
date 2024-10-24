@@ -231,7 +231,7 @@
     margin-left: 84px;
   }
 
-  @media ((max-height: 800px) and (min-height: 700px)) 
+  @media (max-height: 800px) 
   {
     .game {
         flex-shrink: 0;

@@ -255,7 +255,7 @@
     height: 36px;
 }
 
-@media ((max-height: 800px) and (min-height: 700px)) {
+@media (max-height: 800px) and (min-height: 700px) {
     .headingText {
         font-size: 28px;
         font-family: "Nintendo Switch UI";

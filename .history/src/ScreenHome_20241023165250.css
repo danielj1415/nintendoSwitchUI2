@@ -231,7 +231,7 @@
     margin-left: 84px;
   }
 
-  @media ((max-height: 800px) and (min-height: 700px)) 
+  @media (max-height: 800px) and (min-height: 700px) 
   {
     .game {
         flex-shrink: 0;
@@ -299,6 +299,7 @@
         justify-content: center;
         margin-top: 96px;
         height: 1px;
+        background-color: red;
       }
     
       .icons{
