@@ -122,11 +122,11 @@
         font-family: "Nintendo Switch UI";
         color: white;
         font-size: 22px;
+        background-color: red;
     }
     
     .bottomMenuPhotoTextIcons{
         display: flex;
         align-items: center;
-        margin-top: 8px;
     }
 }

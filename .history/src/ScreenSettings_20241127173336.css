@@ -1,5 +1,9 @@
 @import "./fonts.css";
 
+@media ((max-height: 1000px) and (min-height: 800px)){
+    
+}
+
 .topMenuSettings {
     width: 100%;
     background-color: #F0F0F0;

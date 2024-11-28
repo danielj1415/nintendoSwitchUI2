@@ -132,25 +132,4 @@
     .albumHeadingText{
         margin-top: 32px;
     }
-    .imageContainer{
-        margin-left: 128px;
-        margin-top: 28px;
-    }
-    .imageRow{
-        display: flex;
-    }
-    .image{
-        width: 232px;
-        height: 144px;
-        margin-left: 8px;
-        margin-right: 8px;
-        margin-bottom: 16px;
-    }
-    .image.selected{
-        border: 8px solid #43D6DF;
-        margin-right: 0px;
-        margin-left: 0px;
-        margin-top: -8px;
-        margin-bottom: 8px;
-    }
 }

@@ -1,5 +1,9 @@
 @import "./fonts.css";
 
+@media ((max-height: 1000px) and (min-height: 800px)){
+    
+}
+
 .topMenuSettings {
     width: 100%;
     background-color: #F0F0F0;
@@ -299,13 +303,13 @@
 
     .leftMenuSettings {
         width: 35%;
-        height: 532px;
+        height: 564px;
         background-color: #F5F5F5;
     }
 
     .rightMenuSettings {
         width: 65%;
-        height: 532px;
+        height: 564px;
         background-color: #F0F0F0;
     }
 
@@ -455,6 +459,7 @@
         width: 96px;
         height: 42px;
         border-radius: 10px;
+        margin-top: 8px;
     }
     .bottomMenuRowSettings{
         margin-left: 80px;
@@ -462,7 +467,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 12px;
+        margin-top: 4px;
     }
     /* 10.7.2024 1512px */
     .bottomMenuSettingsRowText{

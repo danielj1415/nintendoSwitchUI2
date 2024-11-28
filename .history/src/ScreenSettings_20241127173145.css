@@ -1,5 +1,9 @@
 @import "./fonts.css";
 
+@media ((max-height: 1000px) and (min-height: 800px)){
+    
+}
+
 .topMenuSettings {
     width: 100%;
     background-color: #F0F0F0;
@@ -34,6 +38,7 @@
     width: 68%;
     height: 664px;
     background-color: #F0F0F0;
+    background-color: blue;
 }
 
 .iconBrightnessLight {
@@ -299,13 +304,13 @@
 
     .leftMenuSettings {
         width: 35%;
-        height: 532px;
+        height: 564px;
         background-color: #F5F5F5;
     }
 
     .rightMenuSettings {
         width: 65%;
-        height: 532px;
+        height: 564px;
         background-color: #F0F0F0;
     }
 
@@ -462,7 +467,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 12px;
+        margin-top: 4px;
     }
     /* 10.7.2024 1512px */
     .bottomMenuSettingsRowText{

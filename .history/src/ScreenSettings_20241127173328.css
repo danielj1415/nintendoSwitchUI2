@@ -1,5 +1,9 @@
 @import "./fonts.css";
 
+@media ((max-height: 1000px) and (min-height: 800px)){
+    
+}
+
 .topMenuSettings {
     width: 100%;
     background-color: #F0F0F0;
@@ -462,7 +466,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 12px;
+        margin-top: 14px;
     }
     /* 10.7.2024 1512px */
     .bottomMenuSettingsRowText{

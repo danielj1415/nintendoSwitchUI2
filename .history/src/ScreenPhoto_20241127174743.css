@@ -107,26 +107,25 @@
     }
     
     .iconAPhoto{
-        margin-left: 76px;
-        margin-right: 16px;
+        margin-left: 84px;
+        margin-right: 20px;
         width: 36px;
         height: 36px;
     }
     .iconBPhoto{
-        margin-right: 16px;
+        margin-right: 20px;
         width: 36px;
         height: 36px;
-        margin-left: 76px;
+        margin-left: 84px;
     }
     .bottomMenuRowPhotoText{
         font-family: "Nintendo Switch UI";
         color: white;
-        font-size: 22px;
+        font-size: 26px;
     }
     
     .bottomMenuPhotoTextIcons{
         display: flex;
         align-items: center;
-        margin-top: 8px;
     }
 }
