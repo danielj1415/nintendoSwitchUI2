@@ -3,7 +3,13 @@
 
 
 @media ((max-height: 1000px) and (min-height: 800px)){
-
+/* Set the container to relative positioning */
+.homeScreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
 }
 /* Set the container to relative positioning */
 .homeScreen {
@@ -239,8 +245,8 @@
   {
     .game {
         flex-shrink: 0;
-        width: 280px;
-        height: 280px;
+        width: 306px;
+        height: 306px;
         background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
         backdrop-filter: blur(15px); /* Apply the blur effect to the background */
         transition: all 0.3s ease; /* Smooth transition when selecting */
@@ -249,16 +255,16 @@
         align-items: center; /* Vertically center the image */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add a soft shadow */
       }
-      
+    
       /* Selected game styles */
     .game.selected {
-        width: 340px; /* Increase the size of the selected game */
-        height: 340px;
-        transform: translateY(-50px);
+        width: 380px; /* Increase the size of the selected game */
+        height: 380px;
+        transform: translateY(-60px);
       }
       .game-name-text{
         color: #43D6DF;
-        font-size: 28px;
+        font-size: 32px;
         text-align: center;
       }
       .game-name {
@@ -276,10 +282,10 @@
         justify-content: space-between; /* Space the squares evenly */
         position: relative; /* Ensure it's positioned on top of the image */
         width: 100%; 
-        height: 320px; /* Adjust the height of the row */
+        height: 360px; /* Adjust the height of the row */
         z-index: 1; /* Ensure the row stays above the image */
         top: 50%; /* Vertically center the row */
-        transform: translateY(-260px); /* Adjust the top positioning for perfect centering */
+        transform: translateY(-280px); /* Adjust the top positioning for perfect centering */
         margin-left: 80px;
         gap: 32px;
       }
@@ -301,7 +307,7 @@
         display: flex;
         gap: 28px;
         justify-content: center;
-        margin-top: 104px;
+        margin-top: 96px;
         height: 1px;
       }
     

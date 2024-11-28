@@ -239,8 +239,8 @@
   {
     .game {
         flex-shrink: 0;
-        width: 280px;
-        height: 280px;
+        width: 306px;
+        height: 306px;
         background-color: rgba(255, 255, 255, 0.3); /* Add some transparency */
         backdrop-filter: blur(15px); /* Apply the blur effect to the background */
         transition: all 0.3s ease; /* Smooth transition when selecting */
@@ -252,9 +252,9 @@
       
       /* Selected game styles */
     .game.selected {
-        width: 340px; /* Increase the size of the selected game */
-        height: 340px;
-        transform: translateY(-50px);
+        width: 380 px; /* Increase the size of the selected game */
+        height: 380px;
+        transform: translateY(-60px);
       }
       .game-name-text{
         color: #43D6DF;
@@ -301,7 +301,7 @@
         display: flex;
         gap: 28px;
         justify-content: center;
-        margin-top: 104px;
+        margin-top: 88px;
         height: 1px;
       }
     

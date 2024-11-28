@@ -252,9 +252,9 @@
       
       /* Selected game styles */
     .game.selected {
-        width: 340px; /* Increase the size of the selected game */
-        height: 340px;
-        transform: translateY(-50px);
+        width: 380px; /* Increase the size of the selected game */
+        height: 380px;
+        transform: translateY(-60px);
       }
       .game-name-text{
         color: #43D6DF;
@@ -301,7 +301,7 @@
         display: flex;
         gap: 28px;
         justify-content: center;
-        margin-top: 104px;
+        margin-top: 88px;
         height: 1px;
       }
     
